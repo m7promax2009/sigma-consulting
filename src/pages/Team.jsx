@@ -117,7 +117,7 @@ export default function Team({ onOpenModal }) {
         <h1 className="mt-3 text-2xl sm:text-4xl 2xl:text-5xl font-black text-white">
           Sigma Consulting{" "}
           <span className="gold-gradient-text drop-shadow-[0_2px_20px_rgba(213,164,91,0.35)]">
-            professional jamoasi
+            {t("team_title_highlight")}
           </span>
         </h1>
         <p className="mx-auto mt-2 max-w-2xl 2xl:max-w-3xl text-xs 2xl:text-base text-slate-200 sm:text-sm">

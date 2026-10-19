@@ -369,10 +369,11 @@ const liveApprovals = [
     action: {
       uz: "Janubiy Koreya — D-2 Talaba Vizasi olindi",
       ru: "Южная Корея — Студенческая виза D-2 получена",
+      en: "South Korea — D-2 Student Visa Approved",
     },
     flag: "🇰🇷",
-    time: { uz: "Hozirgina", ru: "Только что" },
-    badge: { uz: "100% Grant", ru: "100% Грант" },
+    time: { uz: "Hozirgina", ru: "Только что", en: "Just now" },
+    badge: { uz: "100% Grant", ru: "100% Грант", en: "100% Grant" },
   },
   {
     id: 2,
@@ -380,10 +381,11 @@ const liveApprovals = [
     action: {
       uz: "Germaniya — Studienkolleg München qabul xati",
       ru: "Германия — Письмо о зачислении Studienkolleg München",
+      en: "Germany — Studienkolleg Munich Admission Letter",
     },
     flag: "🇩🇪",
-    time: { uz: "4 daqiqa oldin", ru: "4 минуты назад" },
-    badge: { uz: "Bepul Ta'lim", ru: "Бесплатное Обучение" },
+    time: { uz: "4 daqiqa oldin", ru: "4 минуты назад", en: "4 mins ago" },
+    badge: { uz: "Bepul Ta'lim", ru: "Бесплатное Обучение", en: "Free Tuition" },
   },
   {
     id: 3,
@@ -391,10 +393,11 @@ const liveApprovals = [
     action: {
       uz: "AQSH — F-1 Talaba Vizasi elchixonadan tasdiqlandi",
       ru: "США — Студенческая виза F-1 подтверждена в посольстве",
+      en: "USA — F-1 Student Visa Approved at Embassy",
     },
     flag: "🇺🇸",
-    time: { uz: "9 daqiqa oldin", ru: "9 минут назад" },
-    badge: { uz: "Viza Tasdiqlandi", ru: "Виза Подтверждена" },
+    time: { uz: "9 daqiqa oldin", ru: "9 минут назад", en: "9 mins ago" },
+    badge: { uz: "Viza Tasdiqlandi", ru: "Виза Подтверждена", en: "Visa Approved" },
   },
   {
     id: 4,
@@ -402,10 +405,11 @@ const liveApprovals = [
     action: {
       uz: "Italiya — Politecnico di Milano 7,200€ stipendiya",
       ru: "Италия — Politecnico di Milano стипендия 7,200€",
+      en: "Italy — Politecnico di Milano 7,200€ Stipend",
     },
     flag: "🇮🇹",
-    time: { uz: "15 daqiqa oldin", ru: "15 минут назад" },
-    badge: { uz: "Yillik Grant", ru: "Годовой Грант" },
+    time: { uz: "15 daqiqa oldin", ru: "15 минут назад", en: "15 mins ago" },
+    badge: { uz: "Yillik Grant", ru: "Годовой Грант", en: "Full Grant" },
   },
   {
     id: 5,
@@ -413,10 +417,11 @@ const liveApprovals = [
     action: {
       uz: "Buyuk Britaniya — University of London Pathway CAS",
       ru: "Великобритания — University of London Pathway CAS",
+      en: "UK — University of London Pathway CAS",
     },
     flag: "🇬🇧",
-    time: { uz: "28 daqiqa oldin", ru: "28 минут назад" },
-    badge: { uz: "Rasmiy Qabul", ru: "Официальное Зачисление" },
+    time: { uz: "28 daqiqa oldin", ru: "28 минут назад", en: "28 mins ago" },
+    badge: { uz: "Rasmiy Qabul", ru: "Официальное Зачисление", en: "Official Offer" },
   },
 ];
 

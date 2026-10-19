@@ -8,69 +8,75 @@ import { useLanguage } from "../contexts/LanguageContext";
 const textReviews = [
   {
     name: "Rustam Qodirov",
-    role: { uz: "Ota-ona (Toshkent)", ru: "Родитель (Ташкент)" },
-    country: { uz: "O'g'li Italiyada o'qimoqda 🇮🇹", ru: "Сын учится в Италии 🇮🇹" },
+    role: { uz: "Ota-ona (Toshkent)", ru: "Родитель (Ташкент)", en: "Parent (Tashkent)" },
+    country: { uz: "O'g'li Italiyada o'qimoqda 🇮🇹", ru: "Сын учится в Италии 🇮🇹", en: "Son studying in Italy 🇮🇹" },
     text: {
       uz: "O'g'limiz Sardorbekni chet elga yuborishda juda ko'p ikkilangandik. Sigma Consulting jamoasi barcha hujjatlarni 100% rasmiy qildi, to'liq grant yutib berdi. Hozir o'g'lim Milan shahrida bepul o'qib, oylik stipendiya ham olyapti. Rahmat sizlarga!",
       ru: "Мы очень переживали, отправляя сына Сардорбека за границу. Команда Sigma Consulting оформила все документы на 100% официально и помогла выиграть полный грант. Теперь наш сын бесплатно учится в Милане и получает ежемесячную стипендию. Спасибо вам!",
+      en: "We were quite hesitant when sending our son Sardorbek abroad. The Sigma Consulting team handled 100% of the official documentation and helped him secure a full scholarship. Now he studies tuition-free in Milan with a monthly living stipend. Sincere gratitude!",
     },
     rating: 5,
-    date: { uz: "12 Sentabr, 2026", ru: "12 Сентября, 2026" },
+    date: { uz: "12 Sentabr, 2026", ru: "12 Сентября, 2026", en: "September 12, 2026" },
   },
   {
     name: "Malika Rahimova",
-    role: { uz: "Talaba (Samarqand)", ru: "Студент (Самарканд)" },
-    country: { uz: "Polsha, Varshava Universiteti 🇵🇱", ru: "Польша, Варшавский университет 🇵🇱" },
+    role: { uz: "Talaba (Samarqand)", ru: "Студент (Самарканд)", en: "Student (Samarkand)" },
+    country: { uz: "Polsha, Varshava Universiteti 🇵🇱", ru: "Польша, Варшавский университет 🇵🇱", en: "Poland, University of Warsaw 🇵🇱" },
     text: {
       uz: "Menda IELTS yo'q edi, ko'p joylar 'viza chiqavermaydi' deb qaytargandi. Sigma mutaxassislari universitetning ichki imtihonidan o'tkazib, 2 haftada elchixonadan viza olib berishdi. Hozir Varshavadaman, hamma sharoit zo'r!",
-      ru: "У меня не было IELTS, многие места отказывали, mówi 'визу не дадим'. Специалисты Sigma подготовили меня к внутреннему экзамену университета, и за 2 недели мы получили визу в посольстве. Теперь я в Варшаве, все условия отличные!",
+      ru: "У меня не было IELTS, многие места отказывали. Специалисты Sigma подготовили меня к внутреннему экзамену университета, и за 2 недели мы получили визу в посольстве. Теперь я в Варшаве, все условия отличные!",
+      en: "I did not have an IELTS certificate, and many agencies turned me away. Sigma specialists prepared me for the university's internal English exam and secured our embassy visa in just 2 weeks. Now I'm thriving in Warsaw!",
     },
     rating: 5,
-    date: { uz: "28 Avgust, 2026", ru: "28 Августа, 2026" },
+    date: { uz: "28 Avgust, 2026", ru: "28 Августа, 2026", en: "August 28, 2026" },
   },
   {
     name: "Jasurbek Toirov",
-    role: { uz: "Talaba (Namangan)", ru: "Студент (Наманган)" },
-    country: { uz: "Janubiy Koreya, Seul 🇰🇷", ru: "Южная Корея, Сеул 🇰🇷" },
+    role: { uz: "Talaba (Namangan)", ru: "Студент (Наманган)", en: "Student (Namangan)" },
+    country: { uz: "Janubiy Koreya, Seul 🇰🇷", ru: "Южная Корея, Сеул 🇰🇷", en: "South Korea, Seoul 🇰🇷" },
     text: {
       uz: "Koreyaga D-2 viza olish oson emas, ayniqsa bank hisob raqami masalasida. Faxriddin aka va viza jamoasi barcha talablarni to'g'ri shakllantirdi. Seulga yetib kelganimda aeroportda kutib olib, yotoqxonaga joylashtirishdi.",
       ru: "Получить студенческую визу D-2 в Корею нелегко, особенно с банковским счетом. Фахриддин и команда по визам правильно оформили все требования. Прибыв в Сеул, нас встретили в аэропорту и поселили в общежитие.",
+      en: "Securing a D-2 visa for Korea is demanding, particularly regarding bank statement verification. Faxriddin and the visa advisory team handled every requirement accurately. When I landed in Seoul, their partner met me at the airport and guided me directly to the dorms.",
     },
     rating: 5,
-    date: { uz: "15 Iyul, 2026", ru: "15 Июля, 2026" },
+    date: { uz: "15 Iyul, 2026", ru: "15 Июля, 2026", en: "July 15, 2026" },
   },
   {
     name: "Dilorom Karimova",
-    role: { uz: "Ota-ona (Farg'ona)", ru: "Родитель (Фергана)" },
-    country: { uz: "Qizi Germaniyada o'qimoqda 🇩🇪", ru: "Дочь учится в Германии 🇩🇪" },
+    role: { uz: "Ota-ona (Farg'ona)", ru: "Родитель (Фергана)", en: "Parent (Fergana)" },
+    country: { uz: "Qizi Germaniyada o'qimoqda 🇩🇪", ru: "Дочь учится в Германии 🇩🇪", en: "Daughter studying in Germany 🇩🇪" },
     text: {
       uz: "Sigma Consulting bilan shartnoma tuzganimizdan hech ham afsuslanmadik. Boshidan oxirigacha shaffof, hech qanday qo'shimcha yashirin xarajatlarsiz ishlashdi. Qizim hozir Myunxenda davlat oliygohida mutlaqo bepul tahsil olyapti.",
       ru: "Мы ни на минуту не пожалели о контракте с Sigma Consulting. От начала до конца всё прозрачно, без скрытых платежей. Наша дочь бесплатно учится в государственном университете в Мюнхене.",
+      en: "We never had a single regret about partnering with Sigma Consulting. From start to finish, the entire process was transparent with zero hidden fees. My daughter is now studying completely tuition-free at a public university in Munich.",
     },
     rating: 5,
-    date: { uz: "04 May, 2026", ru: "04 Мая, 2026" },
+    date: { uz: "04 May, 2026", ru: "04 Мая, 2026", en: "May 4, 2026" },
   },
   {
     name: "Farrux Zokirov",
-    role: { uz: "Talaba (Buxoro)", ru: "Студент (Бухара)" },
-    country: { uz: "Latviya, Riga 🇱🇻", ru: "Латвия, Рига 🇱🇻" },
+    role: { uz: "Talaba (Buxoro)", ru: "Студент (Бухара)", en: "Student (Bukhara)" },
+    country: { uz: "Latviya, Riga 🇱🇻", ru: "Латвия, Рига 🇱🇻", en: "Latvia, Riga 🇱🇻" },
     text: {
       uz: "Schengen vizasi bilan Yevropaning istalgan davlatiga sayohat qilish imkoniyati bor. Universitetda darslar to'liq ingliz tilida. Sigma jamoasiga professional xizmat uchun minnatdorchilik bildiraman!",
       ru: "С шенгенской визой можно путешествовать по любой стране Европы. Занятия в университете проводятся полностью на английском языке. Выражаю благодарность команде Sigma за профессиональный сервис!",
+      en: "Holding a Schengen residence card gives complete freedom to travel across Europe. Classes are taught fully in English. Sincere thanks to the Sigma team for their first-class professional advisory!",
     },
     rating: 5,
-    date: { uz: "21 Aprel, 2026", ru: "21 Апреля, 2026" },
+    date: { uz: "21 Aprel, 2026", ru: "21 Апреля, 2026", en: "April 21, 2026" },
   },
   {
     name: "Shahnoza Alimova",
-    role: { uz: "Talaba (Toshkent)", ru: "Студент (Ташкент)" },
-    country: { uz: "AQSH, Arizona State University 🇺🇸", ru: "США, Аризонский государственный университет 🇺🇸" },
+    role: { uz: "Talaba (Toshkent)", ru: "Студент (Ташкент)", en: "Student (Tashkent)" },
+    country: { uz: "AQSH, Arizona State University 🇺🇸", ru: "США, Аризонский государственный университет 🇺🇸", en: "USA, Arizona State University 🇺🇸" },
     text: {
       uz: "AQSH elchixonasidagi intervyu eng katta qo'rquvim edi. Sigma mutaxassisi Alisher aka bilan 10 martadan ortiq intervyu treningi o'tdik. Konsul atigi 2 ta savol berdi va vizamni 1 daqiqada tasdiqladi!",
       ru: "Интервью в посольстве США было моим самым большим страхом. С специалистом Sigma Алишером мы прошли более 10 тренингов по интервью. Консул задал 2 вопроса и одобрил мою визу за 1 минуту!",
+      en: "The US Embassy interview was my biggest anxiety. With Sigma visa expert Alisher, we went through more than 10 rigorous simulation sessions. At the consulate, the officer asked only two questions and approved my F-1 visa in under a minute!",
     },
     rating: 5,
-    date: { uz: "18 Mart, 2026", ru: "18 Марта, 2026" },
+    date: { uz: "18 Mart, 2026", ru: "18 Марта, 2026", en: "March 18, 2026" },
   },
 ];
 
@@ -91,9 +97,9 @@ export default function Testimonials({ onOpenModal }) {
         </div>
 
         <h1 className="mt-3 text-2xl sm:text-4xl 2xl:text-5xl font-black text-white">
-          Mijozlarimizning{" "}
+          {lang === "ru" ? "Отзывы наших клиентов и" : lang === "en" ? "Real Client Experiences &" : "Mijozlarimizning"}{" "}
           <span className="gold-gradient-text drop-shadow-[0_2px_20px_rgba(213,164,91,0.35)]">
-            haqiqiy fikrlari va videolari
+            {t("testimonials_title_highlight")}
           </span>
         </h1>
         <p className="mx-auto mt-2 max-w-2xl text-xs text-slate-200 sm:text-sm">

@@ -210,6 +210,30 @@ export default function Navbar({ onOpenModal }) {
                 </NavLink>
               ))}
 
+              {/* Mobile Language Switcher */}
+              <div className="grid grid-cols-3 gap-1.5 border-t border-white/[0.08] pt-3 mt-2">
+                {languages.map((lg) => {
+                  const isSelected = lang === lg.code;
+                  return (
+                    <button
+                      key={lg.code}
+                      type="button"
+                      onClick={() => {
+                        changeLanguage(lg.code);
+                        setMobileOpen(false);
+                      }}
+                      className={`py-2 text-center rounded-xl text-xs font-bold transition-all ${
+                        isSelected
+                          ? "bg-[#D5A45B] text-[#071F22] font-black shadow-md"
+                          : "bg-white/[0.05] text-white/80 hover:bg-white/10 hover:text-white border border-white/5"
+                      }`}
+                    >
+                      {lg.code === "uz" ? "Oʻzbek" : lg.code === "ru" ? "Русский" : "English"}
+                    </button>
+                  );
+                })}
+              </div>
+
               {/* Social links row inside mobile menu */}
               <div className="flex items-center justify-around border-t border-white/[0.08] pt-3 mt-2">
                 <a

@@ -34,153 +34,181 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 const allDestinations = [
   {
-    name: { uz: "Amerika Qo'shma Shtatlari", ru: "Соединенные Штаты Америки" },
-    region: { uz: "Amerika & Kanada", ru: "Америка & Канада" },
+    name: { uz: "Amerika Qo'shma Shtatlari", ru: "Соединенные Штаты Америки", en: "United States" },
+    region: { uz: "Amerika & Kanada", ru: "Америка & Канада", en: "USA & Canada" },
     flag: "🇺🇸",
     image: "/countries/USA.webp",
-    program: { uz: "F-1 Talaba Vizasi", ru: "Студенческая виза F-1" },
-    benefit: { uz: "Top-100 Dunyo Universitetlari", ru: "Университеты из Топ-100 мира" },
-    tag: { uz: "AQSH", ru: "США" },
+    program: { uz: "F-1 Talaba Vizasi", ru: "Студенческая виза F-1", en: "F-1 Student Visa" },
+    benefit: { uz: "Top-100 Dunyo Universitetlari", ru: "Университеты из Топ-100 мира", en: "Top-100 Global Universities" },
+    tag: { uz: "AQSH", ru: "США", en: "USA" },
   },
   {
-    name: { uz: "Kanada", ru: "Канада" },
-    region: { uz: "Amerika & Kanada", ru: "Америка & Канада" },
+    name: { uz: "Kanada", ru: "Канада", en: "Canada" },
+    region: { uz: "Amerika & Kanada", ru: "Америка & Канада", en: "USA & Canada" },
     flag: "🇨🇦",
     image: "/countries/Canada.jpg",
-    program: { uz: "Universitet & Kollejlar", ru: "Университеты и колледжи" },
+    program: { uz: "Universitet & Kollejlar", ru: "Университеты и колледжи", en: "Universities & Colleges" },
     benefit: {
       uz: "O'qishdan so'ng 3 yillik PGWP ish ruxsati",
       ru: "3-летняя рабочая виза PGWP после обучения",
+      en: "3-Year Post-Graduation Work Permit (PGWP)",
     },
-    tag: { uz: "Kanada", ru: "Канада" },
+    tag: { uz: "Kanada", ru: "Канада", en: "Canada" },
   },
   {
-    name: { uz: "Germaniya", ru: "Германия" },
-    region: { uz: "Yevropa", ru: "Европа" },
+    name: { uz: "Germaniya", ru: "Германия", en: "Germany" },
+    region: { uz: "Yevropa", ru: "Европа", en: "Europe" },
     flag: "🇩🇪",
     image: "/countries/Germany.jpeg",
-    program: { uz: "Davlat Oliygohlari", ru: "Государственные университеты" },
-    benefit: { uz: "100% Bepul Ta'lim & Studienkolleg", ru: "100% бесплатное обучение & Studienkolleg" },
-    tag: { uz: "Bepul Ta'lim", ru: "Бесплатное обучение" },
+    program: { uz: "Davlat Oliygohlari", ru: "Государственные университеты", en: "Public Universities" },
+    benefit: { uz: "100% Bepul Ta'lim & Studienkolleg", ru: "100% бесплатное обучение & Studienkolleg", en: "100% Tuition-Free & Studienkolleg" },
+    tag: { uz: "Bepul Ta'lim", ru: "Бесплатное обучение", en: "Free Tuition" },
   },
   {
-    name: { uz: "Buyuk Britaniya", ru: "Великобритания" },
-    region: { uz: "Yevropa", ru: "Европа" },
+    name: { uz: "Buyuk Britaniya", ru: "Великобритания", en: "United Kingdom" },
+    region: { uz: "Yevropa", ru: "Европа", en: "Europe" },
     flag: "🇬🇧",
     image: "/countries/UK.jpeg",
-    program: { uz: "Foundation & Bakalavr", ru: "Foundation & Бакалавриат" },
-    benefit: { uz: "2 yillik Graduate Visa (ishlash huquqi)", ru: "2-летняя виза для выпускников (право на работу)" },
-    tag: { uz: "Elita Ta'lim", ru: "Элитное образование" },
+    program: { uz: "Foundation & Bakalavr", ru: "Foundation & Бакалавриат", en: "Foundation & Bachelor's" },
+    benefit: { uz: "2 yillik Graduate Visa (ishlash huquqi)", ru: "2-летняя виза для выпускников (право на работу)", en: "2-Year Graduate Work Visa" },
+    tag: { uz: "Elita Ta'lim", ru: "Элитное образование", en: "Elite Education" },
   },
   {
-    name: { uz: "Italiya", ru: "Италия" },
-    region: { uz: "Yevropa", ru: "Европа" },
+    name: { uz: "Italiya", ru: "Италия", en: "Italy" },
+    region: { uz: "Yevropa", ru: "Европа", en: "Europe" },
     flag: "🇮🇹",
     image: "/countries/Italy.jpg",
-    program: { uz: "Davlat Universitetlari", ru: "Государственные университеты" },
-    benefit: { uz: "100% Grant + 7,200€ yillik stipendiya", ru: "100% грант + 7,200€ стипендия в год" },
-    tag: { uz: "DSU Grant", ru: "Грант DSU" },
+    program: { uz: "Davlat Universitetlari", ru: "Государственные университеты", en: "Public Universities" },
+    benefit: { uz: "100% Grant + 7,200€ yillik stipendiya", ru: "100% грант + 7,200€ стипендия в год", en: "100% DSU Grant + 7,200€ Yearly Stipend" },
+    tag: { uz: "DSU Grant", ru: "Грант DSU", en: "DSU Grant" },
   },
   {
-    name: { uz: "Polsha", ru: "Польша" },
-    region: { uz: "Yevropa", ru: "Европа" },
+    name: { uz: "Polsha", ru: "Польша", en: "Poland" },
+    region: { uz: "Yevropa", ru: "Европа", en: "Europe" },
     flag: "🇵🇱",
     image: "/countries/Poland.webp",
-    program: { uz: "Bakalavr & Magistratura", ru: "Бакалавриат & Магистратура" },
-    benefit: { uz: "Yevropa Ittifoqi Diplomi & Shengen", ru: "Диплом ЕС & Шенген" },
-    tag: { uz: "Tezkor Viza", ru: "Быстрая виза" },
+    program: { uz: "Bakalavr & Magistratura", ru: "Бакалавриат & Магистратура", en: "Bachelor's & Master's" },
+    benefit: { uz: "Yevropa Ittifoqi Diplomi & Shengen", ru: "Диплом ЕС & Шенген", en: "EU Degree & Schengen Access" },
+    tag: { uz: "Tezkor Viza", ru: "Быстрая виза", en: "Fast Visa" },
   },
   {
-    name: { uz: "Janubiy Koreya", ru: "Южная Корея" },
-    region: { uz: "Osiyo", ru: "Азия" },
+    name: { uz: "Janubiy Koreya", ru: "Южная Корея", en: "South Korea" },
+    region: { uz: "Osiyo", ru: "Азия", en: "Asia" },
     flag: "🇰🇷",
     image: "/countries/Korea.jpg",
-    program: { uz: "D-2 / D-4 Vizalari", ru: "Визы D-2 / D-4" },
-    benefit: { uz: "GKS Grantlari & 100% Stipendiya", ru: "Гранты GKS & 100% стипендия" },
-    tag: { uz: "Koreya", ru: "Корея" },
+    program: { uz: "D-2 / D-4 Vizalari", ru: "Визы D-2 / D-4", en: "D-2 / D-4 Visas" },
+    benefit: { uz: "GKS Grantlari & 100% Stipendiya", ru: "Гранты GKS & 100% стипендия", en: "GKS Grants & 100% Scholarship" },
+    tag: { uz: "Koreya", ru: "Корея", en: "Korea" },
   },
   {
-    name: { uz: "Xitoy", ru: "Китай" },
-    region: { uz: "Osiyo", ru: "Азия" },
+    name: { uz: "Xitoy", ru: "Китай", en: "China" },
+    region: { uz: "Osiyo", ru: "Азия", en: "Asia" },
     flag: "🇨🇳",
     image: "/countries/China.jpg",
-    program: { uz: "CSC Hukumat Grantlari", ru: "Государственные гранты CSC" },
-    benefit: { uz: "100% Bepul O'qish, Yotoqxona & Stipendiya", ru: "100% бесплатное обучение, общежитие & стипендия" },
-    tag: { uz: "CSC Grant", ru: "Грант CSC" },
+    program: { uz: "CSC Hukumat Grantlari", ru: "Государственные гранты CSC", en: "CSC Government Grants" },
+    benefit: { uz: "100% Bepul O'qish, Yotoqxona & Stipendiya", ru: "100% бесплатное обучение, общежитие & стипендия", en: "100% Free Tuition, Dormitory & Stipend" },
+    tag: { uz: "CSC Grant", ru: "Грант CSC", en: "CSC Grant" },
   },
   {
-    name: { uz: "Yaponiya", ru: "Япония" },
-    region: { uz: "Osiyo", ru: "Азия" },
+    name: { uz: "Yaponiya", ru: "Япония", en: "Japan" },
+    region: { uz: "Osiyo", ru: "Азия", en: "Asia" },
     flag: "🇯🇵",
     image: "/countries/Japan.jpg",
-    program: { uz: "MEXT & Til Maktablari", ru: "MEXT & Языковые школы" },
-    benefit: { uz: "Nufuzli Oliygohlar & Qonuniy Ishlash", ru: "Престижные университеты & законная работа" },
-    tag: { uz: "Yaponiya", ru: "Япония" },
+    program: { uz: "MEXT & Til Maktablari", ru: "MEXT & Языковые школы", en: "MEXT & Language Schools" },
+    benefit: { uz: "Nufuzli Oliygohlar & Qonuniy Ishlash", ru: "Престижные университеты & законная работа", en: "Top Universities & Legal Part-time Work" },
+    tag: { uz: "Yaponiya", ru: "Япония", en: "Japan" },
   },
   {
-    name: { uz: "Singapur", ru: "Сингапур" },
-    region: { uz: "Osiyo", ru: "Азия" },
+    name: { uz: "Singapur", ru: "Сингапур", en: "Singapore" },
+    region: { uz: "Osiyo", ru: "Азия", en: "Asia" },
     flag: "🇸🇬",
     image: "/countries/Singapore.jpg",
-    program: { uz: "Biznes & IT Dasturlari", ru: "Бизнес и IT программы" },
-    benefit: { uz: "Xalqaro Moliya Markazida Nufuzli Diplom", ru: "Престижный диплом в международном финансовом центре" },
-    tag: { uz: "Biznes", ru: "Бизнес" },
+    program: { uz: "Biznes & IT Dasturlari", ru: "Бизнес и IT программы", en: "Business & IT Degrees" },
+    benefit: { uz: "Xalqaro Moliya Markazida Nufuzli Diplom", ru: "Престижный диплом в международном финансовом центре", en: "Global Financial Center Recognized Degree" },
+    tag: { uz: "Biznes", ru: "Бизнес", en: "Business" },
   },
   {
-    name: { uz: "Malayziya", ru: "Малайзия" },
-    region: { uz: "Osiyo", ru: "Азия" },
+    name: { uz: "Malayziya", ru: "Малайзия", en: "Malaysia" },
+    region: { uz: "Osiyo", ru: "Азия", en: "Asia" },
     flag: "🇲🇾",
     image: "/countries/Malaysia.jpg",
-    program: { uz: "Xalqaro Filiallar (UK/AU)", ru: "Международные филиалы (UK/AU)" },
-    benefit: { uz: "Monash & Nottingham Kampuslari", ru: "Кампусы Monash & Nottingham" },
-    tag: { uz: "Hamyonbop", ru: "Доступный" },
+    program: { uz: "Xalqaro Filiallar (UK/AU)", ru: "Международные филиалы (UK/AU)", en: "UK / Australia Branch Campuses" },
+    benefit: { uz: "Monash & Nottingham Kampuslari", ru: "Кампусы Monash & Nottingham", en: "Monash & Nottingham Campuses" },
+    tag: { uz: "Hamyonbop", ru: "Доступный", en: "Affordable" },
   },
   {
-    name: { uz: "Avstraliya", ru: "Австралия" },
-    region: { uz: "Okeaniya", ru: "Океания" },
+    name: { uz: "Avstraliya", ru: "Австралия", en: "Australia" },
+    region: { uz: "Okeaniya", ru: "Океания", en: "Oceania" },
     flag: "🇦🇺",
     image: "/countries/Australia.webp",
-    program: { uz: "Subclass 500 Vizasi", ru: "Виза Subclass 500" },
-    benefit: { uz: "Yuqori maoshli talabalar amaliyoti", ru: "Высокооплачиваемая стажировка студентов" },
-    tag: { uz: "Okeaniya", ru: "Океания" },
+    program: { uz: "Subclass 500 Vizasi", ru: "Виза Subclass 500", en: "Subclass 500 Student Visa" },
+    benefit: { uz: "Yuqori maoshli talabalar amaliyoti", ru: "Высокооплачиваемая стажировка студентов", en: "High-Wage Student Internships" },
+    tag: { uz: "Okeaniya", ru: "Океания", en: "Oceania" },
   },
 ];
 
 const destinationRegions = [
-  { uz: "Barchasi", ru: "Все" },
-  { uz: "Amerika & Kanada", ru: "Америка & Канада" },
-  { uz: "Yevropa", ru: "Европа" },
-  { uz: "Osiyo", ru: "Азия" },
-  { uz: "Okeaniya", ru: "Океания" },
+  { uz: "Barchasi", ru: "Все", en: "All" },
+  { uz: "Amerika & Kanada", ru: "Америка & Канада", en: "USA & Canada" },
+  { uz: "Yevropa", ru: "Европа", en: "Europe" },
+  { uz: "Osiyo", ru: "Азия", en: "Asia" },
+  { uz: "Okeaniya", ru: "Океания", en: "Oceania" },
 ];
 
 const steps = [
   {
     step: "01",
-    title: { uz: "Suhbat & Bepul Diagnostika", ru: "Беседа и Бесплатная Диагностика" },
+    title: {
+      uz: "Suhbat & Bepul Diagnostika",
+      ru: "Беседа и Бесплатная Диагностика",
+      en: "Profile Audit & Free Diagnostics",
+    },
     desc: {
       uz: "Til darajangiz, baholaringiz va oilaviy byudjetingiz tahlil qilinib, sizga eng mos davlatlar va oliygohlar tanlanadi.",
       ru: "Анализируем ваш уровень языка, оценки и семейный бюджет, подбираем подходящие страны и университеты.",
+      en: "We analyze your language level, academic transcripts, and family budget to identify your best-fit countries and universities.",
     },
-    badge: { uz: "15 daqiqada bepul tahlil", ru: "Бесплатный анализ за 15 минут" },
+    badge: {
+      uz: "15 daqiqada bepul tahlil",
+      ru: "Бесплатный анализ за 15 минут",
+      en: "Free 15-Minute Analysis",
+    },
   },
   {
     step: "02",
-    title: { uz: "Universitet & Grant Tanlovi", ru: "Выбор Университета и Гранта" },
+    title: {
+      uz: "Universitet & Grant Tanlovi",
+      ru: "Выбор Университета и Гранта",
+      en: "University & Scholarship Match",
+    },
     desc: {
       uz: "100% mos xalqaro oliygohlar, mavjud grant dasturlari tasdiqlanadi va rasmiy yuridik shartnoma imzolanadi.",
       ru: "Подтверждаются подходящие зарубежные университеты и программы грантов, подписывается официальный контракт.",
+      en: "We confirm target global universities with active scholarship programs and sign a binding legal guarantee contract.",
     },
-    badge: { uz: "Kafolatlangan qabul", ru: "Гарантированное зачисление" },
+    badge: {
+      uz: "Kafolatlangan qabul",
+      ru: "Гарантированное зачисление",
+      en: "Guaranteed Admission",
+    },
   },
   {
     step: "03",
-    title: { uz: "Qabul, Viza & Safar", ru: "Зачисление, Виза и Поездка" },
+    title: {
+      uz: "Qabul, Viza & Safar",
+      ru: "Зачисление, Виза и Поездка",
+      en: "Admission, Visa & Arrival",
+    },
     desc: {
       uz: "Rasmiy qabul xati olinadi, konsullik intervyusi maxsus treningi o'tkaziladi va xorijda kutib olish ta'minlanadi.",
       ru: "Получается официальное письмо о зачислении, проходит специальная подготовка к консульской беседе, организуется встреча за границей.",
+      en: "We secure your official acceptance letter, deliver 1-on-1 consular interview training, and coordinate airport pickup abroad.",
     },
-    badge: { uz: "98.4% muvaffaqiyat", ru: "98.4% успешность" },
+    badge: {
+      uz: "98.4% muvaffaqiyat",
+      ru: "98.4% успешность",
+      en: "98.4% Success Rate",
+    },
   },
 ];
 
@@ -243,7 +271,7 @@ export default function Home({ onOpenModal }) {
                   className="gold-btn inline-flex items-center justify-center gap-2.5 rounded-full px-8 2xl:px-10 py-3.5 2xl:py-4 text-xs 2xl:text-sm font-black uppercase tracking-wider shadow-[0_4px_25px_rgba(213,164,91,0.4)]"
                 >
                   <Sparkles className="h-4 w-4 text-[#071F22]" />
-                  <span>Imkoniyatingizni bepul sinab ko'ring</span>
+                  <span>{t("home_hero_btn")}</span>
                 </motion.button>
               </div>
 
@@ -485,22 +513,25 @@ export default function Home({ onOpenModal }) {
               
               <SlideIn direction="left" className="lg:col-span-4 text-center lg:text-left">
                 <div className="relative mx-auto inline-block">
-                  <div className="h-56 w-56 2xl:h-64 2xl:w-64 overflow-hidden rounded-2xl border-2 border-[#D5A45B]/60 shadow-[0_10px_30px_rgba(213,164,91,0.25)] bg-[#0B343B]">
+                  <div className="h-60 w-52 sm:h-72 sm:w-60 overflow-hidden rounded-2xl border-2 border-[#D5A45B]/60 shadow-[0_10px_30px_rgba(213,164,91,0.25)] bg-[#0B343B]">
                     <img
                       src="/images/mavluda_tolkunova.jpg"
                       alt="To‘lkunova Mavluda Shomansurovna - Direktor va Asoschi"
                       className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105"
-                      onError={(e) => {
-                        e.currentTarget.src = "/images/ceo.jpg";
-                      }}
                     />
                   </div>
                   <div className="absolute -bottom-2 -right-2 rounded-full bg-gradient-to-r from-[#D5A45B] to-[#F3C77C] px-3 py-1 text-[10px] 2xl:text-xs font-black uppercase text-[#071F22] shadow-lg">
                     ✓ {t("home_leadership_expert")}
                   </div>
                 </div>
-                <h3 className="mt-4 text-lg 2xl:text-xl font-black text-white">To‘lkunova Mavluda</h3>
-                <p className="text-xs 2xl:text-sm text-[#D5A45B] font-bold">Direktor, Sigma Consulting asoschisi</p>
+                <h3 className="mt-4 text-lg 2xl:text-xl font-black text-white">To‘lkunova Mavluda Shomansurovna</h3>
+                <p className="text-xs 2xl:text-sm text-[#D5A45B] font-bold">
+                  {lang === "ru"
+                    ? "Директор, Основатель Sigma Consulting"
+                    : lang === "en"
+                    ? "Director, Founder of Sigma Consulting"
+                    : "Direktor, Sigma Consulting asoschisi"}
+                </p>
               </SlideIn>
 
               <SlideIn direction="right" className="lg:col-span-8">
@@ -516,12 +547,14 @@ export default function Home({ onOpenModal }) {
 
                 <div className="mt-6 flex flex-wrap gap-6 pt-5 border-t border-[#236B70]/40">
                   <div>
-                    <div className="text-xl 2xl:text-2xl font-black text-[#D5A45B]">8+ Yil</div>
+                    <div className="text-xl 2xl:text-2xl font-black text-[#D5A45B]">
+                      {lang === "ru" ? "8+ Лет" : lang === "en" ? "8+ Years" : "8+ Yil"}
+                    </div>
                     <div className="text-[11px] 2xl:text-xs text-slate-300">{t("home_leadership_stat_audit")}</div>
                   </div>
                   <div>
                     <div className="text-xl 2xl:text-2xl font-black text-[#D5A45B]">
-                      <Counter to={35} suffix=" Davlat" duration={1.6} />
+                      <Counter to={35} suffix={lang === "ru" ? " Стран" : lang === "en" ? " Countries" : " Davlat"} duration={1.6} />
                     </div>
                     <div className="text-[11px] 2xl:text-xs text-slate-300">{t("home_leadership_stat_universities")}</div>
                   </div>
