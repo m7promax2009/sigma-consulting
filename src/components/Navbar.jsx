@@ -132,7 +132,7 @@ export default function Navbar({ onOpenModal }) {
                 aria-expanded={langMenuOpen}
               >
                 <span className="text-xs font-black tracking-tight uppercase">
-                  {lang === "uz" ? "O'z" : "Ru"}
+                  {lang === "uz" ? "O'z" : lang === "ru" ? "Ru" : "En"}
                 </span>
                 <ChevronDown
                   className={`h-3 w-3 transition-transform duration-200 ${
@@ -153,7 +153,7 @@ export default function Navbar({ onOpenModal }) {
                   >
                     {languages.map((lg) => {
                       const isSelected = lang === lg.code;
-                      const shortCode = lg.code === "uz" ? "O'z" : "Ru";
+                      const shortCode = lg.short || (lg.code === "uz" ? "O'z" : lg.code === "ru" ? "Ru" : "En");
                       return (
                         <button
                           key={lg.code}

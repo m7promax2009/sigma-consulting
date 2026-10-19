@@ -12,7 +12,7 @@ export default function VideoModal({ video, onClose }) {
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[#0B343B] bg-[#041316] px-4 py-3">
           <div className="flex items-center gap-2">
-            <InstagramIcon className="h-4 w-4 text-[#D9E2DE]" />
+            <InstagramIcon className="h-4 w-4 text-[#D5A45B]" />
             <span className="text-xs font-semibold text-[#E2ECE8]">
               @sigmaconsulting.uz
             </span>
@@ -40,13 +40,13 @@ export default function VideoModal({ video, onClose }) {
         <div className="border-t border-[#0B343B] bg-[#051B1F] p-4 text-left">
           <div className="flex items-center justify-between">
             <h4 className="font-bold text-[#E2ECE8]">{video.studentName}</h4>
-            <span className="rounded-full border border-[#236B70]/60 bg-[#104F5A]/40 px-2.5 py-0.5 text-[11px] font-bold text-[#D9E2DE]">
+            <span className="rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-2.5 py-0.5 text-[11px] font-bold text-[#D5A45B]">
               {video.country}
             </span>
           </div>
           <p className="mt-1 text-xs text-[#9EB3AD]">{video.university}</p>
           <div className="mt-3 flex items-center justify-between pt-2 border-t border-[#0B343B]/60 text-xs">
-            <span className="text-[#D9E2DE] font-medium">{video.achievement}</span>
+            <span className="text-[#D5A45B] font-semibold">{video.achievement}</span>
             <a
               href="https://instagram.com/sigmaconsulting.uz"
               target="_blank"

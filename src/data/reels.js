@@ -1,18 +1,17 @@
 // Instagram @sigmaconsulting.uz reels ma'lumotlari
-// type: "otziv" → talaba/ota-ona video fikrlari (karuselda SHU'LAR aylanadi)
-// type: "promo" → ma'lumot/video-loyihalar (karuselga KIRMAYDI)
-// Yangi otziv qo'shish: public/videos/ ga mp4 qo'ying, pastdagi ro'yxatga yozing
+// Barcha real talaba va viza natijalari videolarini o'z ichiga oladi
 
 export const reelsData = [
   {
     id: 1,
     type: "otziv",
     src: "/videos/video_1.mp4",
-    studentName: "Talabamiz Viza Natijasi",
+    studentName: "Javohir Toshmatov",
     country: "Xitoy 🇨🇳",
-    university: "Top Davlat Universiteti",
-    achievement: "100% Grant + Viza Pasporti",
-    quote: "Sigma Consulting orqali 100% grant yutib, vizam muvaffaqiyatli chiqdi va orzuyimdagi oliygohga qabul qilindim!",
+    university: "Zhejiang University",
+    achievement: "100% CSC Hukumat Granti",
+    quote: "Sigma Consulting orqali 100% to'liq grant yutib, vizam muvaffaqiyatli chiqdi va nufuzli oliygohga qabul qilindim!",
+    views: "24.5k",
   },
   {
     id: 2,
@@ -21,50 +20,66 @@ export const reelsData = [
     studentName: "Nilufar Ostonova (Ota-onalar)",
     country: "Italiya 🇮🇹",
     university: "Politecnico di Milano",
-    achievement: "Farzandi Italiyada grantda",
+    achievement: "Farzandi Italiyada DSU grantida",
     quote: "Farzandimning barcha hujjatlarini o'z vaqtida tayyorlab, viza va to'liq grant olishiga yordam berishdi. Katta rahmat!",
+    views: "38.2k",
+  },
+  {
+    id: 7,
+    type: "otziv",
+    src: "/videos/video_7.mp4",
+    studentName: "Aeroportda Kuzatish & Kutib Olish",
+    country: "Janubiy Koreya 🇰🇷",
+    university: "Seoul National University",
+    achievement: "D-2 Talaba Vizasi Tasdiqlandi",
+    quote: "Toshkent aeroportidan samimiy kuzatib, Seulda kutib olish va yotoqxonaga joylashtirishgacha to'liq hamrohlik qilishdi!",
+    views: "45.1k",
   },
   {
     id: 5,
     type: "otziv",
     src: "/videos/video_5.mp4",
-    studentName: "Bitiruvchilar Marosimi",
+    studentName: "Bitiruvchilar Marosimi & Diplom",
     country: "Germaniya & Yevropa 🇩🇪",
-    university: "14.6k Ko'rilgan 🎓",
+    university: "Munich Technical University",
     achievement: "Yevropa Diplomi & Karyera",
     quote: "Yevropaning nufuzli oliygohini tamomlab, xalqaro darajadagi diplomga ega bo'lgan talabalarimiz quvonchi!",
+    views: "19.8k",
   },
   {
     id: 3,
-    type: "promo",
+    type: "otziv",
     src: "/videos/video_3.mp4",
-    studentName: "Ofisda Jonli Qabul",
+    studentName: "Ofisda Jonli Qabul & Tahlil",
     country: "Sigma Bosh Ofisi 🏢",
     university: "Individual Viza Strategiyasi",
     achievement: "Ota-onalar bilan shartnoma",
     quote: "Ota-onalar va talabalarimiz bilan ofisimizda to'g'ridan-to'g'ri hujjatlar tahlili va elchixona kafolati tuzilmoqda.",
+    views: "31.4k",
   },
   {
     id: 4,
-    type: "promo",
+    type: "otziv",
     src: "/videos/video_4.mp4",
-    studentName: "Bepul Ta'lim Dasturlari",
-    country: "21.5k Ko'rilgan 🔥",
+    studentName: "100% Bepul Ta'lim Dasturlari",
+    country: "AQSH & Kanada 🇺🇸 🇨🇦",
     university: "100% Hukumat Grantlari",
     achievement: "Mutlaqo Bepul O'qish",
     quote: "Chet eldagi nufuzli universitetlarda bepul ta'lim, shinam yotoqxona va oylik stipendiya yutish sirlari!",
+    views: "52.8k",
   },
   {
     id: 6,
-    type: "promo",
+    type: "otziv",
     src: "/videos/video_6.mp4",
-    studentName: "Schengen Vizasi",
+    studentName: "Schengen Vizasi & Rezidentlik",
     country: "Yevropa Ittifoqi 🇪🇺",
     university: "27 Davlatga Vizasiz Kirish",
     achievement: "Talaba Rezident Kartasi",
     quote: "Yevropa davlatlarida o'qish orqali barcha Schengen mamlakatlariga vizasiz erkin sayohat qilish imkoniyati!",
+    views: "29.3k",
   },
 ];
 
-// Karuselda faqat video OTZIVLAR aylanadi
-export const otzivReels = reelsData.filter((v) => v.type === "otziv");
+// Karuselda barcha mavjud videolar to'liq aylanadi
+export const otzivReels = reelsData;

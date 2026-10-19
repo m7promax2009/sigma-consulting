@@ -13,7 +13,7 @@ export function useLanguage() {
 
 export function LanguageProvider({ children }) {
   const stored = localStorage.getItem("sigma_lang");
-  const initialLang = stored && ["uz", "ru"].includes(stored) ? stored : "uz";
+  const initialLang = stored && ["uz", "ru", "en"].includes(stored) ? stored : "uz";
 
   const [lang, setLang] = useState(initialLang);
 
@@ -22,6 +22,8 @@ export function LanguageProvider({ children }) {
     document.documentElement.lang = lang;
     document.title = lang === "ru"
       ? "Sigma Consulting | Образование и виза за рубежом"
+      : lang === "en"
+      ? "Sigma Consulting | Study Abroad & Visa Center"
       : "Sigma Consulting | Chet elda ta'lim va viza markazi";
   }, [lang]);
 
