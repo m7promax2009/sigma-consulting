@@ -84,31 +84,34 @@ export default function Testimonials({ onOpenModal }) {
       {/* Header */}
       <FadeUp className="text-center">
         <div className="inline-block">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#104F5A]/40 px-3.5 py-1 text-xs font-bold text-[#D9E2DE] shadow-sm">
-            <Star className="h-3.5 w-3.5 fill-[#D9E2DE] text-[#D9E2DE]" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3.5 py-1 text-xs font-bold text-[#D5A45B] shadow-sm">
+            <Star className="h-3.5 w-3.5 fill-[#D5A45B] text-[#D5A45B]" />
             <span>{t("heading_testimonials_badge")}</span>
           </div>
         </div>
 
         <h1 className="mt-3 text-2xl sm:text-4xl 2xl:text-5xl font-black text-white">
-          {t("testimonials_hero_title")}
+          Mijozlarimizning{" "}
+          <span className="gold-gradient-text drop-shadow-[0_2px_20px_rgba(213,164,91,0.35)]">
+            haqiqiy fikrlari va videolari
+          </span>
         </h1>
-        <p className="mx-auto mt-2 max-w-2xl text-xs text-[#D9E2DE]/80 sm:text-sm">
+        <p className="mx-auto mt-2 max-w-2xl text-xs text-slate-200 sm:text-sm">
           {t("testimonials_hero_sub")}
         </p>
 
         {/* Global Rating Box */}
         <div className="mt-6 inline-block">
-          <TiltCard maxTilt={2} className="inline-flex items-center gap-4 rounded-2xl glass-card p-3.5 sm:p-4 text-left border border-[#236B70]/50 shadow-lg">
+          <TiltCard maxTilt={2} className="inline-flex items-center gap-4 rounded-2xl glass-card p-3.5 sm:p-4 text-left border border-[#D5A45B]/40 shadow-[0_10px_30px_rgba(213,164,91,0.2)]">
             <div className="flex text-2xl sm:text-3xl font-black text-[#D5A45B]">5.0</div>
-            <div className="h-8 w-px bg-[#236B70]/40" />
+            <div className="h-8 w-px bg-[#236B70]/60" />
             <div>
               <div className="flex text-[#D5A45B]">
                 {"★★★★★".split("").map((s, i) => (
                   <span key={i} className="text-sm">★</span>
                 ))}
               </div>
-                <div className="text-[11px] font-medium text-[#D9E2DE]/80">
+                <div className="text-[11px] font-medium text-slate-300">
                   {t("testimonials_stats_label")}
                 </div>
             </div>
@@ -130,7 +133,7 @@ export default function Testimonials({ onOpenModal }) {
           <h2 className="text-xl sm:text-2xl font-black text-white">
             {t("heading_testimonials")}
           </h2>
-          <p className="mt-1 text-xs text-[#D9E2DE]/70">
+          <p className="mt-1 text-xs text-slate-300">
             {t("heading_testimonials_sub")}
           </p>
         </FadeUp>
@@ -141,7 +144,7 @@ export default function Testimonials({ onOpenModal }) {
               key={i}
               maxTilt={2}
               scaleOnHover={1.015}
-              className="glass-card flex flex-col justify-between p-5 sm:p-6 text-left border border-[#236B70]/40 h-full"
+              className="glass-card flex flex-col justify-between p-5 sm:p-6 text-left border border-[#236B70]/50 hover:border-[#D5A45B]/60 shadow-lg h-full"
             >
               <div>
                 <div className="flex items-center justify-between">
@@ -150,17 +153,17 @@ export default function Testimonials({ onOpenModal }) {
                       <span key={idx} className="text-sm">★</span>
                     ))}
                   </div>
-                  <span className="text-[11px] font-medium text-[#D9E2DE]/50">{r.date[lang] || r.date.uz}</span>
+                  <span className="text-[11px] font-medium text-slate-400">{r.date[lang] || r.date.uz}</span>
                 </div>
 
-                <p className="mt-4 text-xs italic leading-relaxed text-[#D9E2DE]/90">
+                <p className="mt-4 text-xs italic leading-relaxed text-slate-200">
                   "{r.text[lang] || r.text.uz}"
                 </p>
               </div>
 
-              <div className="mt-6 border-t border-[#236B70]/30 pt-4">
+              <div className="mt-6 border-t border-[#236B70]/40 pt-4">
                 <div className="font-bold text-white text-sm">{r.name}</div>
-                <div className="text-[11px] text-[#D9E2DE]/70">{r.role[lang] || r.role.uz}</div>
+                <div className="text-[11px] text-slate-300">{r.role[lang] || r.role.uz}</div>
                 <div className="mt-1 text-[11px] font-bold text-[#D5A45B]">
                   {r.country[lang] || r.country.uz}
                 </div>
@@ -172,14 +175,14 @@ export default function Testimonials({ onOpenModal }) {
 
       {/* Instagram Official Banner */}
       <FadeUp yOffset={25} className="mt-10 sm:mt-12">
-        <div className="glass-card p-6 sm:p-10 text-center text-white border border-[#236B70]/50 shadow-xl relative overflow-hidden">
+        <div className="glass-card p-6 sm:p-10 text-center text-white border border-[#D5A45B]/40 shadow-xl relative overflow-hidden">
           <div className="inline-block">
             <InstagramIcon className="mx-auto h-9 w-9 2xl:h-10 2xl:w-10 text-[#D5A45B]" />
           </div>
-          <h3 className="mt-2 text-xl 2xl:text-2xl font-bold text-white sm:text-2xl">
+          <h3 className="mt-2 text-xl 2xl:text-2xl font-black text-white sm:text-2xl">
             {t("heading_instagram")}
           </h3>
-          <p className="mx-auto mt-2 max-w-xl text-xs text-[#D9E2DE]/80 sm:text-sm">
+          <p className="mx-auto mt-2 max-w-xl text-xs text-slate-200 sm:text-sm">
             {t("heading_instagram_sub")}
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">

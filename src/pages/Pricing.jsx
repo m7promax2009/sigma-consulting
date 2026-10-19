@@ -87,27 +87,30 @@ export default function Pricing({ onOpenModal }) {
       {/* Header */}
       <FadeUp className="text-center mb-8 sm:mb-10">
         <div className="inline-block">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#104F5A]/40 px-3.5 py-1 text-xs font-bold text-[#D9E2DE] shadow-sm">
-            <Sparkles className="h-3.5 w-3.5 text-[#D9E2DE]" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3.5 py-1 text-xs font-bold text-[#D5A45B] shadow-sm">
+            <Sparkles className="h-3.5 w-3.5 text-[#D5A45B]" />
             <span>{t("pricing_header_badge")}</span>
           </div>
         </div>
 
         <h1 className="mt-3 text-2xl sm:text-4xl 2xl:text-5xl font-black text-white">
-          {t("pricing_header_title")}
+          Sigma Consulting{" "}
+          <span className="gold-gradient-text drop-shadow-[0_2px_20px_rgba(213,164,91,0.35)]">
+            Xizmat Tariflari
+          </span>
         </h1>
-        <p className="mx-auto mt-2 max-w-2xl text-xs text-[#D9E2DE]/80 sm:text-sm">
+        <p className="mx-auto mt-2 max-w-2xl text-xs text-slate-200 sm:text-sm">
           {t("pricing_header_desc")}
         </p>
 
         {/* Interactive Payment Switcher */}
-        <div className="mt-6 inline-flex items-center rounded-2xl border border-[#236B70]/50 bg-[#0B343B]/80 p-1.5 shadow-xl backdrop-blur-md">
+        <div className="mt-6 inline-flex items-center rounded-2xl border border-[#236B70]/60 bg-[#0B343B]/80 p-1.5 shadow-xl backdrop-blur-md">
           <button
             onClick={() => setBillingCycle("full")}
             className={`relative rounded-xl px-5 py-2 text-xs font-bold transition-all duration-300 ${
               billingCycle === "full"
-                ? "bg-[#D9E2DE] text-[#071F22] shadow-md"
-                : "text-[#D9E2DE]/80 hover:text-white"
+                ? "bg-gradient-to-r from-[#D5A45B] to-[#F3C77C] text-[#071F22] font-black shadow-[0_0_15px_rgba(213,164,91,0.35)]"
+                : "text-slate-200 hover:text-white"
             }`}
           >
             {t("pricing_full_payment")}
@@ -116,8 +119,8 @@ export default function Pricing({ onOpenModal }) {
             onClick={() => setBillingCycle("installment")}
             className={`relative flex items-center gap-1.5 rounded-xl px-5 py-2 text-xs font-bold transition-all duration-300 ${
               billingCycle === "installment"
-                ? "bg-[#D9E2DE] text-[#071F22] shadow-md"
-                : "text-[#D9E2DE]/80 hover:text-white"
+                ? "bg-gradient-to-r from-[#D5A45B] to-[#F3C77C] text-[#071F22] font-black shadow-[0_0_15px_rgba(213,164,91,0.35)]"
+                : "text-slate-200 hover:text-white"
             }`}
           >
             <span>{t("pricing_installment")}</span>
@@ -128,7 +131,7 @@ export default function Pricing({ onOpenModal }) {
         </div>
 
         {/* Payment Guarantee Notice */}
-        <div className="mt-3 flex items-center justify-center gap-2 text-xs font-semibold text-[#D9E2DE]/70">
+        <div className="mt-3 flex items-center justify-center gap-2 text-xs font-semibold text-slate-300">
           <ShieldCheck className="h-4 w-4 text-[#D5A45B]" />
           <span>{t("pricing_contract_notice")}</span>
         </div>
@@ -148,21 +151,25 @@ export default function Pricing({ onOpenModal }) {
               key={p.id}
               maxTilt={2}
               scaleOnHover={1.015}
-              className="glass-card group flex flex-col justify-between p-6 sm:p-7 2xl:p-8 h-full rounded-3xl border border-[#236B70]/50 hover:border-[#D9E2DE]/70 hover:shadow-[0_12px_40px_rgba(217,226,222,0.15)] transition-all duration-300 relative overflow-hidden"
+              className={`glass-card group flex flex-col justify-between p-6 sm:p-7 2xl:p-8 h-full rounded-3xl border transition-all duration-300 relative overflow-hidden ${
+                p.popular
+                  ? "border-[#D5A45B] shadow-[0_12px_45px_rgba(213,164,91,0.25)]"
+                  : "border-[#236B70]/60 hover:border-[#D5A45B]/60 shadow-xl"
+              }`}
             >
               <div>
                 {/* Uniform Header Badge for ALL cards */}
                 <div className="flex items-center justify-between mb-3">
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#236B70]/60 bg-[#104F5A]/40 px-3 py-1 text-[11px] font-bold tracking-wider text-[#D9E2DE] uppercase">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3 py-1 text-[11px] font-bold tracking-wider text-[#D5A45B] uppercase">
                     <Sparkles className="h-3 w-3 text-[#D5A45B]" />
                     <span>{p.badge}</span>
                   </span>
-                  <span className="text-xl font-black text-white group-hover:text-[#D9E2DE] transition-colors">
+                  <span className="text-xl font-black text-white group-hover:text-[#D5A45B] transition-colors">
                     {p.name}
                   </span>
                 </div>
 
-                <p className="mt-2 text-xs leading-relaxed text-[#D9E2DE]/80 min-h-[44px]">
+                <p className="mt-2 text-xs leading-relaxed text-slate-200 min-h-[44px]">
                   {p.desc}
                 </p>
 
@@ -180,19 +187,19 @@ export default function Pricing({ onOpenModal }) {
                       <span className="text-3xl font-black text-[#D5A45B] sm:text-4xl">
                         {displayPrice}
                       </span>
-                      <span className="text-xs font-bold text-[#D9E2DE]">
+                      <span className="text-xs font-bold text-slate-300">
                         {p.unit} {billingCycle === "installment" && t("pricing_per_month")}
                       </span>
                     </motion.div>
                   </AnimatePresence>
-                  <span className="text-[11px] text-[#D9E2DE]/60 mt-1 block">
+                  <span className="text-[11px] text-slate-400 mt-1 block">
                     {displaySubtitle}
                   </span>
                 </div>
 
                 {/* Included Features */}
                 <div className="mt-5 space-y-3">
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#D9E2DE]">
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#D5A45B]">
                     {t("pricing_included_features")}
                   </p>
                   <ul className="space-y-1.5 text-xs">
@@ -201,10 +208,10 @@ export default function Pricing({ onOpenModal }) {
                         key={i}
                         className="flex items-start gap-2.5 rounded-lg px-2 py-1 -mx-2 transition-colors hover:bg-[#104F5A]/40"
                       >
-                        <div className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#D5A45B]/20 text-[#D5A45B]">
+                        <div className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#D5A45B] text-[#071F22]">
                           <Check className="h-3 w-3 stroke-[3]" />
                         </div>
-                        <span className="text-[#D9E2DE]/90">
+                        <span className="text-white/95 font-medium">
                           {feat}
                         </span>
                       </li>
@@ -214,12 +221,12 @@ export default function Pricing({ onOpenModal }) {
                   {/* Not Included */}
                   {p.notIncluded.length > 0 && (
                     <div className="pt-3 border-t border-dashed border-[#236B70]/40">
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-[#D9E2DE]/50">
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
                         {t("pricing_not_included")}
                       </p>
                       <ul className="mt-1.5 space-y-1 text-xs">
                         {p.notIncluded.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 line-through text-[#D9E2DE]/40 px-2 -mx-2">
+                          <li key={i} className="flex items-start gap-2 line-through text-slate-400/70 px-2 -mx-2">
                             <span>—</span>
                             <span>{item}</span>
                           </li>
@@ -254,14 +261,14 @@ export default function Pricing({ onOpenModal }) {
 
       {/* Comparison FAQ banner */}
       <FadeUp yOffset={25} className="mt-10 sm:mt-12">
-        <div className="glass-card p-6 sm:p-10 text-center border border-[#236B70]/50 shadow-xl relative overflow-hidden">
+        <div className="glass-card p-6 sm:p-10 text-center border border-[#D5A45B]/40 shadow-xl relative overflow-hidden">
           <FloatingElement duration={6} yRange={8} className="absolute -top-10 -right-10 pointer-events-none opacity-20">
-            <Zap className="h-44 w-44 text-[#D9E2DE]" />
+            <Zap className="h-44 w-44 text-[#D5A45B]" />
           </FloatingElement>
           <h3 className="text-xl font-bold text-white sm:text-2xl">
             {t("pricing_faq_title")}
           </h3>
-          <p className="mx-auto mt-2 max-w-xl text-xs text-[#D9E2DE]/80 sm:text-sm">
+          <p className="mx-auto mt-2 max-w-xl text-xs text-slate-200 sm:text-sm">
             {t("pricing_faq_desc")}
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">

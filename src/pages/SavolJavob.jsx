@@ -124,16 +124,19 @@ export default function SavolJavob({ onOpenModal }) {
       {/* Header */}
       <FadeUp className="text-center">
         <div className="inline-block">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#104F5A]/40 px-3.5 py-1 text-xs font-bold text-[#D9E2DE] shadow-sm">
-            <HelpCircle className="h-3.5 w-3.5 text-[#D9E2DE]" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3.5 py-1 text-xs font-bold text-[#D5A45B] shadow-sm">
+            <HelpCircle className="h-3.5 w-3.5 text-[#D5A45B]" />
             <span>{t("faq_badge")}</span>
           </div>
         </div>
 
         <h1 className="mt-3 text-2xl sm:text-4xl 2xl:text-5xl font-black text-white">
-          {t("faq_title")}
+          Sigma Consulting{" "}
+          <span className="gold-gradient-text drop-shadow-[0_2px_20px_rgba(213,164,91,0.35)]">
+            ko'p beriladigan savollar
+          </span>
         </h1>
-        <p className="mx-auto mt-2 max-w-2xl text-xs text-[#D9E2DE]/80 sm:text-sm">
+        <p className="mx-auto mt-2 max-w-2xl text-xs text-slate-200 sm:text-sm">
           {t("faq_desc")}
         </p>
 
@@ -150,14 +153,14 @@ export default function SavolJavob({ onOpenModal }) {
                 }}
                 className={`relative rounded-xl px-4 py-2 text-xs font-bold transition-all duration-200 cursor-pointer overflow-hidden ${
                   isSelected
-                    ? "text-[#071F22] font-black shadow-[0_0_18px_rgba(217,226,222,0.4)]"
-                    : "text-[#D9E2DE]/80 hover:text-white border border-[#236B70]/40 bg-[#104F5A]/20 hover:border-[#D9E2DE]/60"
+                    ? "text-[#071F22] font-black shadow-[0_0_18px_rgba(213,164,91,0.4)]"
+                    : "text-slate-200 hover:text-white border border-[#236B70]/60 bg-[#104F5A]/25 hover:border-[#D5A45B]/60"
                 }`}
               >
                 {isSelected && (
                   <motion.div
                     layoutId="faqCatIndicator"
-                    className="absolute inset-0 rounded-xl bg-[#D9E2DE] shadow-[0_0_15px_rgba(217,226,222,0.35)]"
+                    className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#D5A45B] to-[#F3C77C] shadow-[0_0_15px_rgba(213,164,91,0.35)]"
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
                 )}
@@ -179,12 +182,12 @@ export default function SavolJavob({ onOpenModal }) {
               onClick={() => toggleAccordion(idx)}
               className={`glass-card cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 ${
                 isOpen
-                  ? "border-[#D9E2DE] bg-[#104F5A]/60 shadow-[0_6px_25px_rgba(217,226,222,0.22)]"
-                  : "border-[#236B70]/40 bg-[#0B343B]/40 hover:border-[#D9E2DE]/60 hover:bg-[#104F5A]/25"
+                  ? "border-[#D5A45B] bg-[#104F5A]/60 shadow-[0_6px_25px_rgba(213,164,91,0.22)]"
+                  : "border-[#236B70]/50 bg-[#0B343B]/40 hover:border-[#D5A45B]/60 hover:bg-[#104F5A]/30"
               }`}
             >
               <div className="flex w-full items-center justify-between p-5 text-left text-sm font-bold text-white sm:text-base select-none">
-                <span className={`pr-4 transition-colors ${isOpen ? "text-[#D9E2DE]" : "text-white"}`}>
+                <span className={`pr-4 transition-colors ${isOpen ? "text-[#D5A45B]" : "text-white"}`}>
                   {item.q[lang] || item.q.uz}
                 </span>
                 <motion.div
@@ -192,8 +195,8 @@ export default function SavolJavob({ onOpenModal }) {
                   transition={{ duration: 0.25, ease: "easeInOut" }}
                   className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border transition-colors ${
                     isOpen
-                      ? "border-[#D9E2DE] bg-[#D9E2DE] text-[#071F22]"
-                      : "border-[#236B70]/40 bg-[#071F22] text-[#D9E2DE]"
+                      ? "border-[#D5A45B] bg-[#D5A45B] text-[#071F22]"
+                      : "border-[#236B70]/40 bg-[#071F22] text-[#D5A45B]"
                   }`}
                 >
                   <ChevronDown className="h-4 w-4" />
@@ -209,7 +212,7 @@ export default function SavolJavob({ onOpenModal }) {
                     transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="border-t border-[#236B70]/40 px-5 pb-5 pt-3 text-xs leading-relaxed text-[#D9E2DE]/90 sm:text-sm">
+                    <div className="border-t border-[#236B70]/40 px-5 pb-5 pt-3 text-xs leading-relaxed text-slate-200 sm:text-sm">
                       <p>{item.a[lang] || item.a.uz}</p>
                     </div>
                   </motion.div>
@@ -222,14 +225,14 @@ export default function SavolJavob({ onOpenModal }) {
 
       {/* Still Have Questions Box */}
       <FadeUp yOffset={25} className="mt-10 sm:mt-12">
-        <div className="glass-card p-6 sm:p-10 2xl:p-12 text-center text-white border border-[#236B70]/50 shadow-xl relative overflow-hidden">
+        <div className="glass-card p-6 sm:p-10 2xl:p-12 text-center text-white border border-[#D5A45B]/40 shadow-xl relative overflow-hidden">
           <div className="inline-block">
-            <Sparkles className="mx-auto h-7 w-7 2xl:h-8 2xl:w-8 text-[#D9E2DE]" />
+            <Sparkles className="mx-auto h-7 w-7 2xl:h-8 2xl:w-8 text-[#D5A45B]" />
           </div>
-          <h3 className="mt-2 text-xl 2xl:text-2xl font-bold text-white sm:text-2xl">
+          <h3 className="mt-2 text-xl 2xl:text-2xl font-black text-white sm:text-2xl">
             {t("faq_cta_title")}
           </h3>
-          <p className="mx-auto mt-2 max-w-xl text-xs text-[#D9E2DE]/80 sm:text-sm">
+          <p className="mx-auto mt-2 max-w-xl text-xs text-slate-200 sm:text-sm">
             {t("faq_cta_desc")}
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -250,7 +253,7 @@ export default function SavolJavob({ onOpenModal }) {
               onClick={onOpenModal}
               className="teal-btn flex items-center gap-2 rounded-xl px-6 py-3.5 text-xs font-bold uppercase tracking-wider"
             >
-              <PhoneCall className="h-4 w-4 text-[#D9E2DE]" />
+              <PhoneCall className="h-4 w-4 text-[#D5A45B]" />
               <span>{t("faq_btn_call")}</span>
             </motion.button>
           </div>

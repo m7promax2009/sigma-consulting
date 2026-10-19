@@ -142,8 +142,8 @@ export default function ConsultationModal({ isOpen, onClose, context = {} }) {
 
         {!submitted ? (
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#07262B] px-3.5 py-1 text-xs font-bold text-[#D9E2DE]">
-              <Sparkles className="h-3.5 w-3.5 text-[#D9E2DE]" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3.5 py-1 text-xs font-bold text-[#D5A45B]">
+              <Sparkles className="h-3.5 w-3.5 text-[#D5A45B]" />
               <span>{t("modal_badge")}</span>
             </div>
             <h3 className="mt-3 text-2xl font-black text-white">
@@ -152,8 +152,8 @@ export default function ConsultationModal({ isOpen, onClose, context = {} }) {
 
             {/* Context / Reason Pill */}
             {context?.reason && (
-              <div className="mt-2.5 flex items-center gap-2 rounded-xl border border-[#236B70]/60 bg-[#07262B] px-3 py-1.5 text-xs text-[#D9E2DE]">
-                <span className="h-2 w-2 rounded-full bg-[#D9E2DE]" />
+              <div className="mt-2.5 flex items-center gap-2 rounded-xl border border-[#D5A45B]/30 bg-[#07262B] px-3 py-1.5 text-xs text-[#D5A45B]">
+                <span className="h-2 w-2 rounded-full bg-[#D5A45B]" />
                 <span className="truncate">
                 <span className="font-semibold text-white/70">{t("modal_reason_label")}</span>{" "}
                 {context.reason}
@@ -176,8 +176,8 @@ export default function ConsultationModal({ isOpen, onClose, context = {} }) {
                       {t("modal_name_helper")}
                     </span>
                 </div>
-                <div className="flex h-12 w-full items-center rounded-xl border border-[#236B70] bg-[#07262B] px-3.5 transition-colors focus-within:border-[#D9E2DE]">
-                  <User className="h-4 w-4 shrink-0 text-[#D9E2DE] mr-2.5" />
+                <div className="flex h-12 w-full items-center rounded-xl border border-[#236B70] bg-[#07262B] px-3.5 transition-colors focus-within:border-[#D5A45B]">
+                  <User className="h-4 w-4 shrink-0 text-[#D5A45B] mr-2.5" />
                   <input
                     type="text"
                     required
@@ -202,7 +202,7 @@ export default function ConsultationModal({ isOpen, onClose, context = {} }) {
                       phoneDigits.length === 9
                         ? "text-emerald-400"
                         : phoneDigits.length > 0
-                        ? "text-[#D9E2DE]"
+                        ? "text-[#D5A45B]"
                         : "text-slate-400"
                     }`}
                   >
@@ -213,11 +213,11 @@ export default function ConsultationModal({ isOpen, onClose, context = {} }) {
                   className={`flex h-12 w-full items-center rounded-xl border bg-[#07262B] px-3.5 transition-colors ${
                     phoneError
                       ? "border-red-500/80 focus-within:border-red-400"
-                      : "border-[#236B70] focus-within:border-[#D9E2DE]"
+                      : "border-[#236B70] focus-within:border-[#D5A45B]"
                   }`}
                 >
-                  <Phone className="h-4 w-4 shrink-0 text-[#D9E2DE] mr-2.5" />
-                  <span className="select-none font-bold text-sm text-[#D9E2DE] border-r border-[#236B70] pr-2.5 mr-2.5">
+                  <Phone className="h-4 w-4 shrink-0 text-[#D5A45B] mr-2.5" />
+                  <span className="select-none font-bold text-sm text-[#D5A45B] border-r border-[#236B70] pr-2.5 mr-2.5">
                     +998
                   </span>
                   <input
@@ -244,8 +244,8 @@ export default function ConsultationModal({ isOpen, onClose, context = {} }) {
                   <label className="mb-1.5 block text-xs font-semibold text-slate-200">
                     {t("modal_country_label")}
                   </label>
-                  <div className="flex h-12 w-full items-center rounded-xl border border-[#236B70] bg-[#07262B] px-3 transition-colors focus-within:border-[#D9E2DE]">
-                    <Globe2 className="h-4 w-4 shrink-0 text-[#D9E2DE] mr-2" />
+                  <div className="flex h-12 w-full items-center rounded-xl border border-[#236B70] bg-[#07262B] px-3 transition-colors focus-within:border-[#D5A45B]">
+                    <Globe2 className="h-4 w-4 shrink-0 text-[#D5A45B] mr-2" />
                     <select
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
@@ -271,8 +271,8 @@ export default function ConsultationModal({ isOpen, onClose, context = {} }) {
                   <label className="mb-1.5 block text-xs font-semibold text-slate-200">
                     {t("modal_degree_label")}
                   </label>
-                  <div className="flex h-12 w-full items-center rounded-xl border border-[#236B70] bg-[#07262B] px-3 transition-colors focus-within:border-[#D9E2DE]">
-                    <BookOpen className="h-4 w-4 shrink-0 text-[#D9E2DE] mr-2" />
+                  <div className="flex h-12 w-full items-center rounded-xl border border-[#236B70] bg-[#07262B] px-3 transition-colors focus-within:border-[#D5A45B]">
+                    <BookOpen className="h-4 w-4 shrink-0 text-[#D5A45B] mr-2" />
                     <select
                       value={degree}
                       onChange={(e) => setDegree(e.target.value)}

@@ -108,16 +108,19 @@ export default function Team({ onOpenModal }) {
       {/* Header */}
       <FadeUp className="text-center">
         <div className="inline-block">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#104F5A]/40 px-3.5 py-1 text-xs 2xl:text-sm font-bold text-[#D9E2DE] shadow-sm">
-            <Users className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3.5 py-1 text-xs 2xl:text-sm font-bold text-[#D5A45B] shadow-sm">
+            <Users className="h-3.5 w-3.5 text-[#D5A45B]" />
             <span>{t("team_badge")}</span>
           </div>
         </div>
 
         <h1 className="mt-3 text-2xl sm:text-4xl 2xl:text-5xl font-black text-white">
-          {t("team_title")}
+          Sigma Consulting{" "}
+          <span className="gold-gradient-text drop-shadow-[0_2px_20px_rgba(213,164,91,0.35)]">
+            professional jamoasi
+          </span>
         </h1>
-        <p className="mx-auto mt-2 max-w-2xl 2xl:max-w-3xl text-xs 2xl:text-base text-[#D9E2DE]/80 sm:text-sm">
+        <p className="mx-auto mt-2 max-w-2xl 2xl:max-w-3xl text-xs 2xl:text-base text-slate-200 sm:text-sm">
           {t("team_desc")}
         </p>
       </FadeUp>
@@ -137,20 +140,20 @@ export default function Team({ onOpenModal }) {
               <TiltCard
                 maxTilt={2}
                 scaleOnHover={1.01}
-                className="glass-card relative overflow-hidden p-6 sm:p-8 2xl:p-10 border border-[#236B70]/50 shadow-2xl"
+                className="glass-card relative overflow-hidden p-6 sm:p-8 2xl:p-10 border border-[#236B70]/60 hover:border-[#D5A45B]/60 shadow-2xl"
               >
                 <div className={`grid grid-cols-1 items-start gap-8 lg:grid-cols-12 2xl:gap-12 ${isReversed ? "lg:flex-row-reverse" : ""}`}>
                   
                   {/* Portrait Column */}
                   <div className={`lg:col-span-4 ${isReversed ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className="relative mx-auto aspect-[3/4] max-w-[280px] sm:max-w-[320px] overflow-hidden rounded-2xl border-2 border-[#236B70]/70 shadow-2xl bg-[#0B343B]">
+                    <div className="relative mx-auto aspect-[3/4] max-w-[280px] sm:max-w-[320px] overflow-hidden rounded-2xl border-2 border-[#D5A45B]/50 shadow-[0_12px_35px_rgba(213,164,91,0.2)] bg-[#0B343B]">
                       <img
                         src={member.image}
                         alt={member.name}
                         className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105"
                       />
                       {/* Top status badge */}
-                      <div className="absolute top-3 left-3 rounded-full bg-[#071F22]/85 backdrop-blur-md border border-[#D9E2DE]/30 px-3 py-1 text-[11px] 2xl:text-xs font-bold text-[#D9E2DE] shadow-lg flex items-center gap-1.5">
+                      <div className="absolute top-3 left-3 rounded-full bg-[#071F22]/90 backdrop-blur-md border border-[#D5A45B]/40 px-3 py-1 text-[11px] 2xl:text-xs font-bold text-[#D5A45B] shadow-lg flex items-center gap-1.5">
                         <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                         <span>{member.badge[lang] || member.badge.uz}</span>
                       </div>
@@ -161,12 +164,12 @@ export default function Team({ onOpenModal }) {
                   <div className={`text-left lg:col-span-8 ${isReversed ? "lg:order-1" : "lg:order-2"}`}>
                     {/* Top Credentials Pills */}
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#236B70]/60 bg-[#104F5A]/50 px-3 py-1 text-xs 2xl:text-sm font-bold text-[#D9E2DE]">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3 py-1 text-xs 2xl:text-sm font-bold text-[#D5A45B]">
                         <Briefcase className="h-3.5 w-3.5 text-[#D5A45B]" />
                         <span>{member.experience[lang] || member.experience.uz}</span>
                       </span>
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#236B70]/40 bg-[#071F22]/60 px-3 py-1 text-xs 2xl:text-sm font-medium text-[#D9E2DE]/90">
-                        <Globe2 className="h-3.5 w-3.5 text-[#D9E2DE]/70" />
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#236B70]/50 bg-[#104F5A]/50 px-3 py-1 text-xs 2xl:text-sm font-semibold text-white/90">
+                        <Globe2 className="h-3.5 w-3.5 text-[#D5A45B]" />
                         <span>{member.highlight[lang] || member.highlight.uz}</span>
                       </span>
                     </div>
@@ -180,7 +183,7 @@ export default function Team({ onOpenModal }) {
                     </p>
 
                     {/* Bio paragraphs */}
-                    <div className="mt-4 space-y-3 text-xs sm:text-sm 2xl:text-base leading-relaxed text-[#D9E2DE]/90">
+                    <div className="mt-4 space-y-3 text-xs sm:text-sm 2xl:text-base leading-relaxed text-slate-200">
                       {paragraphs.map((p, pIndex) => (
                         <p key={pIndex}>{p}</p>
                       ))}
@@ -188,14 +191,14 @@ export default function Team({ onOpenModal }) {
 
                     {/* Specialties / Key Competencies */}
                     <div className="mt-6 border-t border-[#236B70]/40 pt-4">
-                      <div className="text-[11px] 2xl:text-xs font-bold uppercase tracking-wider text-[#D9E2DE]/70 mb-2.5">
+                      <div className="text-[11px] 2xl:text-xs font-bold uppercase tracking-wider text-[#D5A45B] mb-2.5">
                         {t("team_main_spec")}
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {member.specialties.map((spec, sIndex) => (
                           <span
                             key={sIndex}
-                            className="inline-flex items-center gap-1.5 rounded-lg border border-[#D9E2DE]/25 bg-[#104F5A]/60 px-3 py-1.5 text-xs 2xl:text-sm font-semibold text-[#D9E2DE] shadow-sm hover:border-[#D9E2DE]/50 transition-colors"
+                            className="inline-flex items-center gap-1.5 rounded-lg border border-[#D5A45B]/30 bg-[#104F5A]/60 px-3 py-1.5 text-xs 2xl:text-sm font-semibold text-white shadow-sm hover:border-[#D5A45B] transition-colors"
                           >
                             <CheckCircle2 className="h-3.5 w-3.5 text-[#D5A45B]" />
                             <span>{spec[lang] || spec.uz}</span>
@@ -214,14 +217,14 @@ export default function Team({ onOpenModal }) {
 
       {/* Bottom Guarantee Banner */}
       <FadeUp yOffset={25} className="mt-12">
-        <div className="glass-card p-6 sm:p-10 2xl:p-12 text-center text-white border border-[#236B70]/50 shadow-xl relative overflow-hidden">
+        <div className="glass-card p-6 sm:p-10 2xl:p-12 text-center text-white border border-[#D5A45B]/40 shadow-xl relative overflow-hidden">
           <div className="inline-block">
             <Sparkles className="h-7 w-7 2xl:h-8 2xl:w-8 text-[#D5A45B] mx-auto" />
           </div>
-          <h3 className="mt-2 text-xl 2xl:text-2xl font-bold text-white sm:text-2xl">
+          <h3 className="mt-2 text-xl 2xl:text-2xl font-black text-white sm:text-2xl">
             {t("team_guarantee_title")}
           </h3>
-          <p className="mx-auto mt-2 max-w-xl 2xl:max-w-2xl text-xs 2xl:text-base text-[#D9E2DE]/80 sm:text-sm">
+          <p className="mx-auto mt-2 max-w-xl 2xl:max-w-2xl text-xs 2xl:text-base text-slate-200 sm:text-sm">
             {t("team_guarantee_desc")}
           </p>
           <motion.button

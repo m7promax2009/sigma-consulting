@@ -76,14 +76,17 @@ export default function Joylashuv({ onOpenModal }) {
           transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8 text-center"
         >
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#D5A45B]/30 bg-[#D5A45B]/10 px-3.5 py-1 text-xs font-bold text-[#D5A45B]">
-            <MapPin className="h-3.5 w-3.5" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3.5 py-1 text-xs font-bold text-[#D5A45B]">
+            <MapPin className="h-3.5 w-3.5 text-[#D5A45B]" />
             Bizning manzil
           </span>
           <h1 className="mt-3 text-3xl font-black text-white sm:text-4xl xl:text-5xl">
-            Joylashuv
+            Sigma Consulting{" "}
+            <span className="gold-gradient-text drop-shadow-[0_2px_20px_rgba(213,164,91,0.35)]">
+              Joylashuvi
+            </span>
           </h1>
-          <p className="mx-auto mt-2 max-w-xl text-sm text-[#D9E2DE]/70">
+          <p className="mx-auto mt-2 max-w-xl text-sm text-slate-200">
             SIGMA CONSULTING ofisi Toshkent shahrida qulay joyda joylashgan
           </p>
         </motion.div>
@@ -101,11 +104,11 @@ export default function Joylashuv({ onOpenModal }) {
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35, delay: 0.1 + i * 0.07 }}
-              className="flex flex-col items-center rounded-2xl border border-[#236B70]/40 bg-[#0B343B]/60 py-4 px-2 text-center"
+              className="flex flex-col items-center rounded-2xl border border-[#236B70]/60 bg-[#0B343B]/70 py-4 px-2 text-center shadow-lg"
             >
               <Icon className="mb-1.5 h-5 w-5 text-[#D5A45B]" />
-              <span className="text-xl font-black text-white sm:text-2xl">{value}</span>
-              <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#D9E2DE]/55 sm:text-xs">
+              <span className="text-xl font-black text-[#D5A45B] sm:text-2xl">{value}</span>
+              <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-300 sm:text-xs">
                 {label}
               </span>
             </motion.div>
@@ -117,7 +120,7 @@ export default function Joylashuv({ onOpenModal }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, delay: 0.15 }}
-          className="mb-8 rounded-2xl border border-[#D9E2DE]/25 bg-[#D9E2DE]/5 p-5"
+          className="mb-8 rounded-2xl border border-[#D5A45B]/30 bg-[#104F5A]/40 p-5 shadow-lg"
         >
           <div className="flex items-center gap-2 mb-3">
             <GraduationCap className="h-5 w-5 text-[#D5A45B]" />
@@ -125,7 +128,7 @@ export default function Joylashuv({ onOpenModal }) {
           </div>
           <div className="flex flex-col gap-2.5">
             {features.map(({ emoji, text }) => (
-              <div key={text} className="flex items-start gap-2.5 text-sm text-[#D9E2DE]/85">
+              <div key={text} className="flex items-start gap-2.5 text-sm text-slate-200">
                 <span className="text-base leading-none mt-0.5">{emoji}</span>
                 <span>{text}</span>
               </div>
@@ -146,16 +149,15 @@ export default function Joylashuv({ onOpenModal }) {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.22 + i * 0.07 }}
-              className="flex items-start gap-4 rounded-2xl border border-[#236B70]/40 bg-[#0B343B]/60 p-5 backdrop-blur-sm"
+              className="flex items-start gap-4 rounded-2xl border border-[#236B70]/50 hover:border-[#D5A45B]/60 bg-[#0B343B]/70 p-5 backdrop-blur-sm shadow-md transition-colors"
             >
               <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
-                style={{ background: `${color}18`, border: `1px solid ${color}30` }}
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D5A45B]/15 border border-[#D5A45B]/30"
               >
-                <Icon className="h-5 w-5" style={{ color }} />
+                <Icon className="h-5 w-5 text-[#D5A45B]" />
               </span>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#D9E2DE]/50">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#D5A45B]">
                   {label}
                 </p>
                 <p className="mt-0.5 text-sm font-bold text-white sm:text-base">{value}</p>
@@ -173,24 +175,24 @@ export default function Joylashuv({ onOpenModal }) {
         >
           <a
             href="tel:+998974424737"
-            className="flex flex-1 items-center gap-3 rounded-2xl border border-[#a78bfa]/30 bg-[#a78bfa]/8 px-5 py-4 text-white transition-all hover:border-[#a78bfa]/60 hover:bg-[#a78bfa]/15"
+            className="flex flex-1 items-center gap-3 rounded-2xl border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-5 py-4 text-white transition-all hover:bg-[#D5A45B]/20"
           >
-            <Phone className="h-5 w-5 text-[#a78bfa] shrink-0" />
+            <Phone className="h-5 w-5 text-[#D5A45B] shrink-0" />
             <div>
-              <p className="text-xs text-[#D9E2DE]/50 font-semibold uppercase tracking-wide">Qo'ng'iroq</p>
-              <p className="text-sm font-bold">+998 97 442 47 37</p>
+              <p className="text-xs text-slate-300 font-semibold uppercase tracking-wide">Qo'ng'iroq</p>
+              <p className="text-sm font-bold text-[#D5A45B]">+998 97 442 47 37</p>
             </div>
           </a>
           <a
             href="https://t.me/Sigma_director"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-1 items-center gap-3 rounded-2xl border border-[#38bdf8]/30 bg-[#38bdf8]/8 px-5 py-4 text-white transition-all hover:border-[#38bdf8]/60 hover:bg-[#38bdf8]/15"
+            className="flex flex-1 items-center gap-3 rounded-2xl border border-[#236B70]/60 bg-[#104F5A]/40 px-5 py-4 text-white transition-all hover:border-[#D5A45B]/60 hover:text-[#D5A45B]"
           >
-            <Send className="h-5 w-5 text-[#38bdf8] shrink-0" />
+            <Send className="h-5 w-5 text-[#D5A45B] shrink-0" />
             <div>
-              <p className="text-xs text-[#D9E2DE]/50 font-semibold uppercase tracking-wide">Telegram</p>
-              <p className="text-sm font-bold">@Sigma_director</p>
+              <p className="text-xs text-slate-300 font-semibold uppercase tracking-wide">Telegram</p>
+              <p className="text-sm font-bold text-white">@Sigma_director</p>
             </div>
           </a>
         </motion.div>

@@ -211,7 +211,7 @@ export default function Home({ onOpenModal }) {
             <SlideIn direction="left" distance={40} className="lg:col-span-6 space-y-5 2xl:space-y-6">
               {/* Badge */}
               <div className="inline-block">
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#104F5A]/40 px-3.5 py-1 text-xs 2xl:text-sm font-bold text-[#D9E2DE] backdrop-blur-md shadow-sm">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3.5 py-1 text-xs 2xl:text-sm font-bold text-[#D5A45B] backdrop-blur-md shadow-sm">
                   <Sparkles className="h-3.5 w-3.5 text-[#D5A45B]" />
                   <span>{t("home_hero_badge")}</span>
                 </div>
@@ -226,7 +226,7 @@ export default function Home({ onOpenModal }) {
               </h1>
 
               {/* Description */}
-              <p className="text-xs leading-relaxed text-[#D9E2DE]/90 sm:text-base 2xl:text-lg max-w-xl">
+              <p className="text-xs leading-relaxed text-[#E2ECE8] sm:text-base 2xl:text-lg max-w-xl">
                 {t("home_hero_desc")}
               </p>
 
@@ -278,36 +278,36 @@ export default function Home({ onOpenModal }) {
         {/* ─── 2. NUMERICAL STATS BAR (ANIMATED JS COUNTERS) ─────────── */}
         <section id="stats-section" className="w-full max-w-[min(94vw,2800px)] mx-auto px-4 sm:px-8 xl:px-12 2xl:px-16">
         <div className="grid grid-cols-2 gap-3.5 lg:grid-cols-4 sm:gap-5 2xl:gap-6">
-          <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D9E2DE]">
-            <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D9E2DE]">
+          <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D5A45B] shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+            <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D5A45B]">
               <Counter to={8} suffix={t("home_stat_suffix_years")} duration={1.5} />
             </div>
             <div className="mt-1.5 text-xs 2xl:text-sm font-bold text-white">{t("home_stat_consulting")}</div>
-            <div className="mt-0.5 text-[11px] 2xl:text-xs text-[#D9E2DE]/70">{t("home_stat_since_2018")}</div>
+            <div className="mt-0.5 text-[11px] 2xl:text-xs text-slate-300">{t("home_stat_since_2018")}</div>
           </TiltCard>
 
-          <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D9E2DE]">
-            <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D9E2DE]">
+          <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D5A45B] shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+            <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D5A45B]">
               <Counter to={5140} suffix="+" duration={1.8} />
             </div>
             <div className="mt-1.5 text-xs 2xl:text-sm font-bold text-white">{t("home_stat_successful_students")}</div>
-            <div className="mt-0.5 text-[11px] 2xl:text-xs text-[#D9E2DE]/70">{t("home_stat_admitted_visa")}</div>
+            <div className="mt-0.5 text-[11px] 2xl:text-xs text-slate-300">{t("home_stat_admitted_visa")}</div>
           </TiltCard>
 
-          <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D9E2DE]">
-            <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D9E2DE]">
+          <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D5A45B] shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+            <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D5A45B]">
               <Counter to={98.4} decimals={1} suffix="%" duration={1.6} />
             </div>
             <div className="mt-1.5 text-xs 2xl:text-sm font-bold text-white">{t("home_stat_confirmation_rate")}</div>
-            <div className="mt-0.5 text-[11px] 2xl:text-xs text-[#D9E2DE]/70">{t("home_stat_consular_effectiveness")}</div>
+            <div className="mt-0.5 text-[11px] 2xl:text-xs text-slate-300">{t("home_stat_consular_effectiveness")}</div>
           </TiltCard>
 
-          <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D9E2DE]">
-            <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D9E2DE]">
+          <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D5A45B] shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+            <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D5A45B]">
               <Counter to={12} suffix={t("home_stat_countries")} duration={1.5} />
             </div>
             <div className="mt-1.5 text-xs 2xl:text-sm font-bold text-white">{t("home_stat_partner_countries")}</div>
-            <div className="mt-0.5 text-[11px] 2xl:text-xs text-[#D9E2DE]/70">{t("home_stat_regions")}</div>
+            <div className="mt-0.5 text-[11px] 2xl:text-xs text-slate-300">{t("home_stat_regions")}</div>
           </TiltCard>
         </div>
       </section>
@@ -316,20 +316,20 @@ export default function Home({ onOpenModal }) {
       <section className="w-full max-w-[min(94vw,2800px)] mx-auto px-4 sm:px-8 xl:px-12 2xl:px-16">
         <FadeUp className="mb-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#104F5A]/40 px-3 py-1 text-xs 2xl:text-sm font-bold text-[#D9E2DE]">
-              <Globe2 className="h-3.5 w-3.5" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3 py-1 text-xs 2xl:text-sm font-bold text-[#D5A45B]">
+              <Globe2 className="h-3.5 w-3.5 text-[#D5A45B]" />
               <span>{t("home_destinations_badge")}</span>
             </div>
             <h2 className="mt-2 text-2xl font-black tracking-tight text-white sm:text-3xl lg:text-4xl 2xl:text-5xl">
               {t("home_destinations_title")}
             </h2>
-            <p className="mt-1.5 text-xs text-[#D9E2DE]/80 sm:text-sm 2xl:text-base max-w-2xl">
+            <p className="mt-1.5 text-xs text-slate-300 sm:text-sm 2xl:text-base max-w-2xl">
               {t("home_destinations_desc")}
             </p>
           </div>
           <Link
             to="/natijalar"
-            className="inline-flex items-center gap-1.5 text-xs 2xl:text-sm font-bold text-[#D9E2DE] hover:text-white transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs 2xl:text-sm font-bold text-[#D5A45B] hover:text-[#F3C77C] transition-colors"
           >
             <span>{t("home_destinations_all_results")}</span>
             <ArrowRight className="h-4 w-4" />
@@ -346,14 +346,14 @@ export default function Home({ onOpenModal }) {
                 onClick={() => setSelectedRegion(region.uz)}
                 className={`relative rounded-xl px-4 2xl:px-5 py-2 text-xs 2xl:text-sm font-bold transition-all duration-200 cursor-pointer overflow-hidden ${
                   isSelected
-                    ? "text-[#071F22] font-black shadow-[0_0_18px_rgba(217,226,222,0.4)]"
-                    : "text-[#D9E2DE]/80 hover:text-white border border-[#236B70]/40 bg-[#104F5A]/20 hover:border-[#D9E2DE]/60"
+                    ? "text-[#071F22] font-black shadow-[0_0_18px_rgba(213,164,91,0.4)]"
+                    : "text-slate-200 hover:text-white border border-[#236B70]/40 bg-[#104F5A]/20 hover:border-[#D5A45B]/60"
                 }`}
               >
                 {isSelected && (
                   <motion.div
                     layoutId="homeRegionIndicator"
-                    className="absolute inset-0 rounded-xl bg-[#D9E2DE] shadow-[0_0_15px_rgba(217,226,222,0.35)]"
+                    className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#D5A45B] to-[#F3C77C] shadow-[0_0_15px_rgba(213,164,91,0.35)]"
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
                 )}
@@ -371,7 +371,7 @@ export default function Home({ onOpenModal }) {
           <AnimatePresence>
             {filteredDestinations.map((c) => (
               <TiltCard
-                key={c.name}
+                key={c.name.uz}
                 maxTilt={2.5}
                 scaleOnHover={1.02}
                 onClick={() =>
@@ -380,32 +380,32 @@ export default function Home({ onOpenModal }) {
                     country: c.name[lang] || c.name.uz,
                   })
                 }
-                className="glass-card group cursor-pointer flex flex-col justify-between overflow-hidden p-0 h-full border border-[#236B70]/40 shadow-md"
+                className="glass-card group cursor-pointer flex flex-col justify-between overflow-hidden p-0 h-full border border-[#236B70]/40 hover:border-[#D5A45B]/60 shadow-md"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#0B343B]">
                   <img
                     src={c.image}
-                    alt={c.name}
+                    alt={c.name.uz}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
                       e.currentTarget.src = "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80";
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#071F22] via-[#071F22]/20 to-transparent" />
-                  <div className="absolute top-2.5 left-2.5 rounded-full border border-white/20 bg-black/65 px-2.5 py-0.5 text-xs font-bold text-white shadow-md backdrop-blur-md">
+                  <div className="absolute top-2.5 left-2.5 rounded-full border border-[#D5A45B]/30 bg-black/75 px-2.5 py-0.5 text-xs font-bold text-white shadow-md backdrop-blur-md">
                     {c.flag} {c.tag[lang] || c.tag.uz}
                   </div>
                 </div>
 
                 <div className="flex flex-1 flex-col justify-between p-4 2xl:p-5">
                   <div>
-                    <h3 className="text-sm 2xl:text-base font-bold text-white group-hover:text-[#D9E2DE] transition-colors flex items-center justify-between">
+                    <h3 className="text-sm 2xl:text-base font-bold text-white group-hover:text-[#D5A45B] transition-colors flex items-center justify-between">
                       <span>{c.name[lang] || c.name.uz}</span>
-                      <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-[#D9E2DE]" />
+                      <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-[#D5A45B]" />
                     </h3>
-                    <p className="mt-1 text-xs text-[#D9E2DE]/70">{c.program[lang] || c.program.uz}</p>
+                    <p className="mt-1 text-xs text-slate-300">{c.program[lang] || c.program.uz}</p>
                   </div>
-                  <div className="mt-3 rounded-lg border border-[#236B70]/40 bg-[#104F5A]/40 px-2.5 py-1.5 text-[11px] 2xl:text-xs font-semibold text-[#D9E2DE]">
+                  <div className="mt-3 rounded-lg border border-[#D5A45B]/30 bg-[#104F5A]/40 px-2.5 py-1.5 text-[11px] 2xl:text-xs font-semibold text-[#E2ECE8]">
                     {c.benefit[lang] || c.benefit.uz}
                   </div>
                 </div>
@@ -428,14 +428,14 @@ export default function Home({ onOpenModal }) {
       {/* ─── 5. QANDAY ISHLAYMIZ (HOW WE WORK) ───────────────────────── */}
       <section className="w-full max-w-[min(94vw,2800px)] mx-auto px-4 sm:px-8 xl:px-12 2xl:px-16">
         <FadeUp className="mb-8 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#104F5A]/40 px-3.5 py-1 text-xs 2xl:text-sm font-bold text-[#D9E2DE]">
-            <Compass className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-3.5 py-1 text-xs 2xl:text-sm font-bold text-[#D5A45B]">
+            <Compass className="h-3.5 w-3.5 text-[#D5A45B]" />
             <span>{t("home_process_badge")}</span>
           </div>
           <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl lg:text-4xl 2xl:text-5xl">
             {t("home_process_title")}
           </h2>
-          <p className="mx-auto mt-1.5 max-w-xl 2xl:max-w-2xl text-xs text-[#D9E2DE]/80 sm:text-sm 2xl:text-base">
+          <p className="mx-auto mt-1.5 max-w-xl 2xl:max-w-2xl text-xs text-slate-300 sm:text-sm 2xl:text-base">
             {t("home_process_desc")}
           </p>
         </FadeUp>
@@ -446,26 +446,26 @@ export default function Home({ onOpenModal }) {
               key={i}
               maxTilt={2.5}
               scaleOnHover={1.02}
-              className="glass-card group relative flex flex-col justify-between p-6 2xl:p-8 text-left border-t-2 border-t-[#D9E2DE] h-full shadow-lg transition-all duration-300 hover:border-[#D9E2DE] hover:shadow-[0_12px_35px_rgba(217,226,222,0.15)]"
+              className="glass-card group relative flex flex-col justify-between p-6 2xl:p-8 text-left border-t-2 border-t-[#D5A45B] h-full shadow-lg transition-all duration-300 hover:border-[#D5A45B] hover:shadow-[0_12px_35px_rgba(213,164,91,0.2)]"
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl 2xl:text-3xl font-black text-[#D9E2DE] transition-transform duration-300 group-hover:scale-110 origin-left">
+                  <span className="text-2xl 2xl:text-3xl font-black text-[#D5A45B] transition-transform duration-300 group-hover:scale-110 origin-left">
                     {st.step}
                   </span>
-                    <span className="rounded-full bg-[#104F5A] px-2.5 py-0.5 text-[10px] 2xl:text-xs font-bold text-[#D9E2DE] border border-[#D9E2DE]/30 group-hover:border-[#D9E2DE]">
-                      {st.badge[lang] || st.badge.uz}
-                    </span>
+                  <span className="rounded-full bg-[#D5A45B]/15 px-2.5 py-0.5 text-[10px] 2xl:text-xs font-bold text-[#D5A45B] border border-[#D5A45B]/30 group-hover:border-[#D5A45B]">
+                    {st.badge[lang] || st.badge.uz}
+                  </span>
                 </div>
-                <h3 className="mt-3 text-base 2xl:text-lg font-bold text-white group-hover:text-[#D9E2DE] transition-colors">
+                <h3 className="mt-3 text-base 2xl:text-lg font-bold text-white group-hover:text-[#D5A45B] transition-colors">
                   {st.title[lang] || st.title.uz}
                 </h3>
-                <p className="mt-2 text-xs 2xl:text-sm leading-relaxed text-[#D9E2DE]/80">
+                <p className="mt-2 text-xs 2xl:text-sm leading-relaxed text-slate-200">
                   {st.desc[lang] || st.desc.uz}
                 </p>
               </div>
-              <div className="mt-5 pt-3.5 border-t border-[#236B70]/40 flex items-center text-xs 2xl:text-sm font-bold text-[#D9E2DE]">
-                <Check className="h-3.5 w-3.5 mr-1.5" />
+              <div className="mt-5 pt-3.5 border-t border-[#236B70]/40 flex items-center text-xs 2xl:text-sm font-bold text-[#D5A45B]">
+                <Check className="h-3.5 w-3.5 mr-1.5 text-[#D5A45B]" />
                 <span>{t("home_step_badge_contract")}</span>
               </div>
             </TiltCard>
@@ -473,63 +473,63 @@ export default function Home({ onOpenModal }) {
         </div>
       </section>
 
-      {/* ─── 6. LEADERSHIP HIGHLIGHT ─────────────────────────────────── */}
+      {/* ─── 6. LEADERSHIP HIGHLIGHT (MAVLUDA TOLKUNOVA - ASOSCHI & DIREKTOR) ─── */}
       <section className="w-full max-w-[min(94vw,2800px)] mx-auto px-4 sm:px-8 xl:px-12 2xl:px-16">
         <FadeUp yOffset={30}>
           <TiltCard
             maxTilt={2}
             scaleOnHover={1.01}
-            className="glass-card relative overflow-hidden p-6 sm:p-8 2xl:p-12 text-white border border-[#236B70]/50 shadow-2xl"
+            className="glass-card relative overflow-hidden p-6 sm:p-8 2xl:p-12 text-white border border-[#D5A45B]/40 shadow-2xl"
           >
             <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-12 2xl:gap-12">
               
               <SlideIn direction="left" className="lg:col-span-4 text-center lg:text-left">
                 <div className="relative mx-auto inline-block">
-                  <div className="h-48 w-48 2xl:h-64 2xl:w-64 overflow-hidden rounded-2xl border-2 border-[#236B70]/60 shadow-xl bg-[#0B343B]">
+                  <div className="h-56 w-56 2xl:h-64 2xl:w-64 overflow-hidden rounded-2xl border-2 border-[#D5A45B]/60 shadow-[0_10px_30px_rgba(213,164,91,0.25)] bg-[#0B343B]">
                     <img
-                      src="/images/ceo.jpg"
-                      alt="Nargiza Rahimova - Head International Consultant"
+                      src="/images/mavluda_tolkunova.jpg"
+                      alt="To‘lkunova Mavluda Shomansurovna - Direktor va Asoschi"
                       className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105"
                       onError={(e) => {
-                        e.currentTarget.src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80";
+                        e.currentTarget.src = "/images/ceo.jpg";
                       }}
                     />
                   </div>
-                  <div className="absolute -bottom-2 -right-2 rounded-full bg-[#D9E2DE] px-3 py-0.5 text-[10px] 2xl:text-xs font-black uppercase text-[#071F22] shadow-md">
+                  <div className="absolute -bottom-2 -right-2 rounded-full bg-gradient-to-r from-[#D5A45B] to-[#F3C77C] px-3 py-1 text-[10px] 2xl:text-xs font-black uppercase text-[#071F22] shadow-lg">
                     ✓ {t("home_leadership_expert")}
                   </div>
                 </div>
-                <h3 className="mt-3 text-lg 2xl:text-xl font-black text-white">Nargiza Rahimova</h3>
-                <p className="text-xs 2xl:text-sm text-[#D9E2DE] font-bold">{t("home_leadership_role")}</p>
+                <h3 className="mt-4 text-lg 2xl:text-xl font-black text-white">To‘lkunova Mavluda</h3>
+                <p className="text-xs 2xl:text-sm text-[#D5A45B] font-bold">Direktor, Sigma Consulting asoschisi</p>
               </SlideIn>
 
               <SlideIn direction="right" className="lg:col-span-8">
-                <div className="inline-block rounded-md border border-[#236B70]/50 bg-[#104F5A]/50 px-2.5 py-0.5 text-xs font-bold text-[#D9E2DE]">
+                <div className="inline-block rounded-md border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-2.5 py-0.5 text-xs font-bold text-[#D5A45B]">
                   {t("home_leadership_team")}
                 </div>
                 <h2 className="mt-3 text-xl font-black text-white sm:text-2xl 2xl:text-3xl leading-snug">
                   "{t("home_leadership_quote")}"
                 </h2>
-                <p className="mt-3 text-xs 2xl:text-base leading-relaxed text-[#D9E2DE]/90">
+                <p className="mt-3 text-xs 2xl:text-base leading-relaxed text-slate-200">
                   {t("home_leadership_bio")}
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-6 pt-5 border-t border-[#236B70]/40">
                   <div>
-                    <div className="text-xl 2xl:text-2xl font-black text-[#D9E2DE]">{t("home_leadership_stat_15min")}</div>
-                    <div className="text-[11px] 2xl:text-xs text-[#D9E2DE]/70">{t("home_leadership_stat_audit")}</div>
+                    <div className="text-xl 2xl:text-2xl font-black text-[#D5A45B]">8+ Yil</div>
+                    <div className="text-[11px] 2xl:text-xs text-slate-300">{t("home_leadership_stat_audit")}</div>
                   </div>
                   <div>
-                    <div className="text-xl 2xl:text-2xl font-black text-[#D9E2DE]">
-                      <Counter to={120} suffix="+" duration={1.6} />
+                    <div className="text-xl 2xl:text-2xl font-black text-[#D5A45B]">
+                      <Counter to={35} suffix=" Davlat" duration={1.6} />
                     </div>
-                    <div className="text-[11px] 2xl:text-xs text-[#D9E2DE]/70">{t("home_leadership_stat_universities")}</div>
+                    <div className="text-[11px] 2xl:text-xs text-slate-300">{t("home_leadership_stat_universities")}</div>
                   </div>
                   <div>
-                    <div className="text-xl 2xl:text-2xl font-black text-[#D9E2DE]">
+                    <div className="text-xl 2xl:text-2xl font-black text-[#D5A45B]">
                       24 / 7
                     </div>
-                    <div className="text-[11px] 2xl:text-xs text-[#D9E2DE]/70">{t("home_leadership_stat_curator")}</div>
+                    <div className="text-[11px] 2xl:text-xs text-slate-300">{t("home_leadership_stat_curator")}</div>
                   </div>
                 </div>
               </SlideIn>
@@ -545,15 +545,15 @@ export default function Home({ onOpenModal }) {
           <TiltCard
             maxTilt={2}
             scaleOnHover={1.01}
-            className="glass-card relative overflow-hidden p-6 sm:p-10 2xl:p-12 text-center border border-[#236B70]/50 shadow-xl"
+            className="glass-card relative overflow-hidden p-6 sm:p-10 2xl:p-12 text-center border border-[#D5A45B]/40 shadow-xl"
           >
             <div className="inline-block">
-              <Sparkles className="mx-auto h-7 w-7 2xl:h-8 2xl:w-8 text-[#D9E2DE]" />
+              <Sparkles className="mx-auto h-7 w-7 2xl:h-8 2xl:w-8 text-[#D5A45B]" />
             </div>
             <h2 className="mt-2 text-xl font-black text-white sm:text-3xl 2xl:text-4xl">
               {t("home_cta_bottom_title")}
             </h2>
-            <p className="mx-auto mt-2 max-w-xl 2xl:max-w-2xl text-xs text-[#D9E2DE]/80 sm:text-sm 2xl:text-base">
+            <p className="mx-auto mt-2 max-w-xl 2xl:max-w-2xl text-xs text-slate-200 sm:text-sm 2xl:text-base">
               {t("home_cta_bottom_desc")}
             </p>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -578,7 +578,7 @@ export default function Home({ onOpenModal }) {
                 rel="noreferrer"
                 className="teal-btn inline-flex items-center gap-2 rounded-xl px-6 2xl:px-8 py-3.5 2xl:py-4 text-xs 2xl:text-sm font-bold"
               >
-                <Send className="h-4 w-4 text-[#D9E2DE]" />
+                <Send className="h-4 w-4 text-[#D5A45B]" />
                 <span>{t("home_cta_telegram")}</span>
               </motion.a>
             </div>
