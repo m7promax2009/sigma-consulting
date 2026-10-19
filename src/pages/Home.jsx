@@ -212,7 +212,7 @@ export default function Home({ onOpenModal }) {
               {/* Badge */}
               <div className="inline-block">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#104F5A]/40 px-3.5 py-1 text-xs 2xl:text-sm font-bold text-[#D9E2DE] backdrop-blur-md shadow-sm">
-                  <Sparkles className="h-3.5 w-3.5 text-[#D9E2DE]" />
+                  <Sparkles className="h-3.5 w-3.5 text-[#D5A45B]" />
                   <span>{t("home_hero_badge")}</span>
                 </div>
               </div>
@@ -220,7 +220,7 @@ export default function Home({ onOpenModal }) {
               {/* Main Headline */}
               <h1 className="text-3xl font-black tracking-tight text-white sm:text-5xl lg:text-5xl 2xl:text-6xl 3xl:text-7xl sm:leading-[1.12]">
                 {t("home_hero_title_part")}{" "}
-                <span className="gold-gradient-text drop-shadow-[0_2px_20px_rgba(217, 226, 222,0.35)]">
+                <span className="gold-gradient-text drop-shadow-[0_2px_20px_rgba(213,164,91,0.35)]">
                   {t("home_hero_title_highlight")}
                 </span>
               </h1>
@@ -240,7 +240,7 @@ export default function Home({ onOpenModal }) {
                       reason: "Bosh sahifa: Asosiy Hero 'Imkoniyatingizni bepul sinab ko'ring' tugmasi",
                     })
                   }
-                  className="gold-btn inline-flex items-center justify-center gap-2.5 rounded-full px-8 2xl:px-10 py-3.5 2xl:py-4 text-xs 2xl:text-sm font-black uppercase tracking-wider shadow-[0_4px_25px_rgba(217, 226, 222,0.4)]"
+                  className="gold-btn inline-flex items-center justify-center gap-2.5 rounded-full px-8 2xl:px-10 py-3.5 2xl:py-4 text-xs 2xl:text-sm font-black uppercase tracking-wider shadow-[0_4px_25px_rgba(213,164,91,0.4)]"
                 >
                   <Sparkles className="h-4 w-4 text-[#071F22]" />
                   <span>Imkoniyatingizni bepul sinab ko'ring</span>
@@ -250,15 +250,15 @@ export default function Home({ onOpenModal }) {
               {/* Trust Assurances */}
               <div className="flex flex-wrap items-center gap-2.5 pt-1">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs font-semibold text-white/90 backdrop-blur-md">
-                  <CheckCircle2 className="h-4 w-4 text-[#D9E2DE] shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-[#D5A45B] shrink-0" />
                   <span>{t("home_trust_licensed")}</span>
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs font-semibold text-white/90 backdrop-blur-md">
-                  <CheckCircle2 className="h-4 w-4 text-[#D9E2DE] shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-[#D5A45B] shrink-0" />
                   <span>{t("home_trust_contract")}</span>
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs font-semibold text-white/90 backdrop-blur-md">
-                  <CheckCircle2 className="h-4 w-4 text-[#D9E2DE] shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-[#D5A45B] shrink-0" />
                   <span>{t("home_trust_consular_prep")}</span>
                 </div>
               </div>

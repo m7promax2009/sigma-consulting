@@ -128,7 +128,7 @@ export default function App() {
               href="https://t.me/Sigma_consulting"
               target="_blank"
               rel="noreferrer"
-              className="group flex items-center gap-2 rounded-full border border-[#D9E2DE]/40 bg-[#071F22]/85 backdrop-blur-xl p-3 text-[#D9E2DE] shadow-[0_8px_30px_rgba(0,0,0,0.6)] transition-all hover:border-[#D9E2DE] hover:bg-[#D9E2DE] hover:text-[#071F22]"
+              className="group flex items-center gap-2 rounded-full border border-[#D5A45B]/40 bg-[#071F22]/85 backdrop-blur-xl p-3 text-[#D5A45B] shadow-[0_8px_30px_rgba(0,0,0,0.6)] transition-all hover:border-[#D5A45B] hover:bg-[#D5A45B] hover:text-[#071F22]"
               title="Telegramda yozish"
             >
               <Send className="h-5 w-5" />
@@ -142,7 +142,7 @@ export default function App() {
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => openModal({ reason: t("app_reason_fab") })}
-              className="gold-btn group flex items-center gap-2 rounded-full p-3 shadow-[0_8px_30px_rgba(217, 226, 222,0.45)] transition-all"
+              className="gold-btn group flex items-center gap-2 rounded-full p-3 shadow-[0_8px_30px_rgba(213,164,91,0.45)] transition-all"
               title={t("app_title_free_consultation")}
             >
               <Phone className="h-5 w-5 text-[#071F22]" />

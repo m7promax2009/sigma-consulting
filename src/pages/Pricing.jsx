@@ -129,7 +129,7 @@ export default function Pricing({ onOpenModal }) {
 
         {/* Payment Guarantee Notice */}
         <div className="mt-3 flex items-center justify-center gap-2 text-xs font-semibold text-[#D9E2DE]/70">
-          <ShieldCheck className="h-4 w-4 text-[#D9E2DE]" />
+          <ShieldCheck className="h-4 w-4 text-[#D5A45B]" />
           <span>{t("pricing_contract_notice")}</span>
         </div>
       </FadeUp>
@@ -154,7 +154,7 @@ export default function Pricing({ onOpenModal }) {
                 {/* Uniform Header Badge for ALL cards */}
                 <div className="flex items-center justify-between mb-3">
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-[#236B70]/60 bg-[#104F5A]/40 px-3 py-1 text-[11px] font-bold tracking-wider text-[#D9E2DE] uppercase">
-                    <Sparkles className="h-3 w-3 text-[#D9E2DE]" />
+                    <Sparkles className="h-3 w-3 text-[#D5A45B]" />
                     <span>{p.badge}</span>
                   </span>
                   <span className="text-xl font-black text-white group-hover:text-[#D9E2DE] transition-colors">
@@ -177,7 +177,7 @@ export default function Pricing({ onOpenModal }) {
                       transition={{ duration: 0.2 }}
                       className="flex items-baseline gap-1.5"
                     >
-                      <span className="text-3xl font-black text-white sm:text-4xl">
+                      <span className="text-3xl font-black text-[#D5A45B] sm:text-4xl">
                         {displayPrice}
                       </span>
                       <span className="text-xs font-bold text-[#D9E2DE]">
@@ -201,7 +201,7 @@ export default function Pricing({ onOpenModal }) {
                         key={i}
                         className="flex items-start gap-2.5 rounded-lg px-2 py-1 -mx-2 transition-colors hover:bg-[#104F5A]/40"
                       >
-                        <div className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#D9E2DE]/20 text-[#D9E2DE]">
+                        <div className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#D5A45B]/20 text-[#D5A45B]">
                           <Check className="h-3 w-3 stroke-[3]" />
                         </div>
                         <span className="text-[#D9E2DE]/90">

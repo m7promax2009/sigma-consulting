@@ -149,7 +149,7 @@ export default function Results({ onOpenModal }) {
       <FadeUp className="text-center">
         <div className="inline-block">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#236B70]/50 bg-[#104F5A]/40 px-3.5 py-1 text-xs 2xl:text-sm font-bold text-[#D9E2DE] shadow-sm">
-            <Sparkles className="h-3.5 w-3.5 text-[#D9E2DE]" />
+            <Sparkles className="h-3.5 w-3.5 text-[#D5A45B]" />
             <span>{t("results_badge")}</span>
           </div>
         </div>
@@ -164,32 +164,32 @@ export default function Results({ onOpenModal }) {
 
       {/* Numerical Stats Dashboard */}
       <div className="mt-8 grid grid-cols-2 gap-3.5 lg:grid-cols-4 sm:gap-5 2xl:gap-6">
-        <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D9E2DE]">
-          <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D9E2DE]">
+        <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D5A45B]">
+          <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D5A45B]">
             <Counter to={5140} suffix="+" duration={1.8} />
           </div>
           <div className="mt-1 text-xs 2xl:text-sm font-bold text-white">{t("results_stat_successful")}</div>
           <div className="mt-0.5 text-[11px] 2xl:text-xs text-[#D9E2DE]/60">{t("results_stat_since")}</div>
         </TiltCard>
 
-        <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D9E2DE]">
-          <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D9E2DE]">
+        <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D5A45B]">
+          <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D5A45B]">
             <Counter prefix="$" to={14.2} decimals={1} suffix="M+" duration={2} />
           </div>
           <div className="mt-1 text-xs 2xl:text-sm font-bold text-white">{t("results_stat_grants")}</div>
           <div className="mt-0.5 text-[11px] 2xl:text-xs text-[#D9E2DE]/60">{t("results_stat_effort")}</div>
         </TiltCard>
 
-        <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D9E2DE]">
-          <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D9E2DE]">
+        <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D5A45B]">
+          <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D5A45B]">
             <Counter to={98.4} decimals={1} suffix="%" duration={1.6} />
           </div>
           <div className="mt-1 text-xs 2xl:text-sm font-bold text-white">{t("results_stat_confirmation")}</div>
           <div className="mt-0.5 text-[11px] 2xl:text-xs text-[#D9E2DE]/60">{t("results_stat_consular")}</div>
         </TiltCard>
 
-        <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D9E2DE]">
-          <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D9E2DE]">
+        <TiltCard maxTilt={2} className="glass-card p-5 2xl:p-6 text-center border-t-2 border-t-[#D5A45B]">
+          <div className="text-2xl sm:text-3xl 2xl:text-4xl font-black text-[#D5A45B]">
             <Counter to={180} suffix="+" duration={1.5} />
           </div>
           <div className="mt-1 text-xs 2xl:text-sm font-bold text-white">{t("results_stat_partners")}</div>
@@ -214,7 +214,7 @@ export default function Results({ onOpenModal }) {
               {isSelected && (
                 <motion.div
                   layoutId="activeCategoryIndicator"
-                  className="absolute inset-0 rounded-xl bg-[#D9E2DE] shadow-[0_0_15px_rgba(217,226,222,0.35)]"
+                  className="absolute inset-0 rounded-xl bg-[#D5A45B] shadow-[0_0_15px_rgba(213,164,91,0.35)]"
                   transition={{ type: "spring", stiffness: 350, damping: 30 }}
                 />
               )}
@@ -267,7 +267,7 @@ export default function Results({ onOpenModal }) {
 
               <div className="flex flex-1 flex-col justify-between p-4 2xl:p-5">
                 <div>
-                  <p className="text-xs 2xl:text-sm font-bold text-[#D9E2DE]">{item.university}</p>
+                  <p className="text-xs 2xl:text-sm font-bold text-[#D5A45B]">{item.university}</p>
                   <p className="mt-0.5 text-xs text-[#D9E2DE]/70">{item.program[lang] || item.program.uz}</p>
 
                   <div className="mt-3 rounded-xl border border-[#236B70]/40 bg-[#104F5A]/40 p-2.5 2xl:p-3">
@@ -282,7 +282,7 @@ export default function Results({ onOpenModal }) {
 
                 <div className="mt-4 flex items-center justify-between border-t border-[#236B70]/30 pt-2.5 text-[11px] text-[#D9E2DE]/60">
                   <span>{item.year[lang] || item.year.uz}</span>
-                  <span className="font-bold text-[#D9E2DE]">{t("results_student_sigma")}</span>
+                  <span className="font-bold text-[#D5A45B]">{t("results_student_sigma")}</span>
                 </div>
               </div>
             </TiltCard>

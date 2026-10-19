@@ -58,7 +58,7 @@ export default function Navbar({ onOpenModal }) {
                 className={({ isActive }) =>
                   `relative whitespace-nowrap px-2.5 2xl:px-3 py-1.5 text-xs 2xl:text-[13px] font-semibold tracking-normal transition-all duration-200 rounded-full ${
                     isActive
-                      ? "text-[#D9E2DE] font-bold bg-[#D9E2DE]/15 shadow-[0_0_12px_rgba(217, 226, 222,0.2)]"
+                      ? "text-[#D5A45B] font-bold bg-[#D5A45B]/15 shadow-[0_0_12px_rgba(213,164,91,0.2)]"
                       : "text-white/80 hover:text-white hover:bg-white/[0.06]"
                   }`
                 }
@@ -78,7 +78,7 @@ export default function Navbar({ onOpenModal }) {
                 rel="noreferrer"
                 title="Instagram"
                 aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/80 transition-all hover:border-[#D9E2DE]/50 hover:bg-[#D9E2DE]/10 hover:text-[#D9E2DE] hover:scale-105"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/80 transition-all hover:border-[#D5A45B]/50 hover:bg-[#D5A45B]/10 hover:text-[#D5A45B] hover:scale-105"
               >
                 <InstagramIcon className="h-4 w-4" />
               </a>
@@ -88,7 +88,7 @@ export default function Navbar({ onOpenModal }) {
                 rel="noreferrer"
                 title="Telegram"
                 aria-label="Telegram"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/80 transition-all hover:border-[#D9E2DE]/50 hover:bg-[#D9E2DE]/10 hover:text-[#D9E2DE] hover:scale-105"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/80 transition-all hover:border-[#D5A45B]/50 hover:bg-[#D5A45B]/10 hover:text-[#D5A45B] hover:scale-105"
               >
                 <Send className="h-4 w-4" />
               </a>
@@ -97,7 +97,7 @@ export default function Navbar({ onOpenModal }) {
             {/* Direct Phone Number - Clear & Visible in #D9E2DE */}
             <a
               href="tel:+998974424737"
-              className="flex items-center gap-2 rounded-full border border-transparent px-3 sm:px-3.5 py-2 text-xs sm:text-sm 2xl:text-[15px] font-extrabold text-[#D9E2DE] transition-all hover:border-[#D9E2DE]/40 hover:bg-[#D9E2DE]/10"
+              className="flex items-center gap-2 rounded-full border border-transparent px-3 sm:px-3.5 py-2 text-xs sm:text-sm 2xl:text-[15px] font-extrabold text-[#D5A45B] transition-all hover:border-[#D5A45B]/40 hover:bg-[#D5A45B]/10"
             >
               <Phone className="h-4 w-4" />
               <span className="whitespace-nowrap font-black tracking-tight">{t("phone")}</span>
@@ -107,9 +107,9 @@ export default function Navbar({ onOpenModal }) {
             <button
               onClick={onOpenModal}
               style={{
-                backgroundColor: "#D9E2DE",
+                backgroundColor: "#D5A45B",
                 color: "#071F22",
-                boxShadow: "0 4px 20px rgba(217, 226, 222, 0.4)",
+                boxShadow: "0 4px 20px rgba(213, 164, 91, 0.4)",
               }}
               className="hidden md:flex items-center gap-2 rounded-full px-5 sm:px-6 py-2.5 sm:py-2.5 text-xs sm:text-sm font-extrabold tracking-wide uppercase transition-all duration-200 hover:brightness-110 hover:scale-[1.03] active:scale-95"
             >
@@ -124,8 +124,8 @@ export default function Navbar({ onOpenModal }) {
                 onClick={() => setLangMenuOpen((prev) => !prev)}
                 className={`flex h-9 w-9 sm:h-9 sm:w-11 items-center justify-center gap-0.5 rounded-full border transition-all ${
                   langMenuOpen
-                    ? "border-[#D9E2DE] bg-[#D9E2DE]/15 text-[#D9E2DE] shadow-[0_0_15px_rgba(217, 226, 222,0.3)]"
-                    : "border-white/10 bg-white/[0.04] text-white hover:border-[#D9E2DE]/40 hover:bg-white/[0.08]"
+                    ? "border-[#D5A45B] bg-[#D5A45B]/15 text-[#D5A45B] shadow-[0_0_15px_rgba(213,164,91,0.3)]"
+                    : "border-white/10 bg-white/[0.04] text-white hover:border-[#D5A45B]/40 hover:bg-white/[0.08]"
                 }`}
                 title="Tilni tanlash / Выбор языка"
                 aria-label="Tilni tanlash"
@@ -136,7 +136,7 @@ export default function Navbar({ onOpenModal }) {
                 </span>
                 <ChevronDown
                   className={`h-3 w-3 transition-transform duration-200 ${
-                    langMenuOpen ? "rotate-180 text-[#D9E2DE]" : "text-white/60"
+                    langMenuOpen ? "rotate-180 text-[#D5A45B]" : "text-white/60"
                   }`}
                 />
               </button>
@@ -164,7 +164,7 @@ export default function Navbar({ onOpenModal }) {
                           }}
                           className={`flex h-8 w-full items-center justify-center rounded-xl text-xs font-black tracking-tight transition-all ${
                             isSelected
-                              ? "bg-[#D9E2DE] text-[#071F22] shadow-[0_2px_8px_rgba(217, 226, 222,0.4)]"
+                              ? "bg-[#D5A45B] text-[#071F22] shadow-[0_2px_8px_rgba(213,164,91,0.4)]"
                               : "text-white/80 hover:bg-white/[0.08] hover:text-white"
                           }`}
                         >
@@ -201,7 +201,7 @@ export default function Navbar({ onOpenModal }) {
                   className={({ isActive }) =>
                     `rounded-2xl px-4 py-2.5 text-sm font-semibold transition-all ${
                       isActive
-                        ? "bg-[#D9E2DE]/15 text-[#D9E2DE] font-bold"
+                        ? "bg-[#D5A45B]/15 text-[#D5A45B] font-bold"
                         : "text-white/80 hover:bg-white/[0.05] hover:text-white"
                     }`
                   }
@@ -216,18 +216,18 @@ export default function Navbar({ onOpenModal }) {
                   href="https://instagram.com/sigmaconsulting.uz"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 text-xs font-semibold text-white/80 hover:text-[#D9E2DE]"
+                  className="flex items-center gap-2 text-xs font-semibold text-white/80 hover:text-[#D5A45B]"
                 >
-                  <InstagramIcon className="h-4 w-4 text-[#D9E2DE]" />
+                  <InstagramIcon className="h-4 w-4 text-[#D5A45B]" />
                   <span>Instagram</span>
                 </a>
                 <a
                   href="https://t.me/Sigma_consulting"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 text-xs font-semibold text-white/80 hover:text-[#D9E2DE]"
+                  className="flex items-center gap-2 text-xs font-semibold text-white/80 hover:text-[#D5A45B]"
                 >
-                  <Send className="h-4 w-4 text-[#D9E2DE]" />
+                  <Send className="h-4 w-4 text-[#D5A45B]" />
                   <span>Telegram</span>
                 </a>
               </div>
@@ -239,7 +239,7 @@ export default function Navbar({ onOpenModal }) {
                   onOpenModal();
                 }}
                 style={{
-                  backgroundColor: "#D9E2DE",
+                  backgroundColor: "#D5A45B",
                   color: "#071F22",
                 }}
                 className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl py-3 text-xs font-extrabold uppercase tracking-wider shadow-lg transition-transform active:scale-95"

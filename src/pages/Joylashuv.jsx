@@ -76,7 +76,7 @@ export default function Joylashuv({ onOpenModal }) {
           transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8 text-center"
         >
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#D9E2DE]/30 bg-[#D9E2DE]/10 px-3.5 py-1 text-xs font-bold text-[#D9E2DE]">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#D5A45B]/30 bg-[#D5A45B]/10 px-3.5 py-1 text-xs font-bold text-[#D5A45B]">
             <MapPin className="h-3.5 w-3.5" />
             Bizning manzil
           </span>
@@ -103,7 +103,7 @@ export default function Joylashuv({ onOpenModal }) {
               transition={{ duration: 0.35, delay: 0.1 + i * 0.07 }}
               className="flex flex-col items-center rounded-2xl border border-[#236B70]/40 bg-[#0B343B]/60 py-4 px-2 text-center"
             >
-              <Icon className="mb-1.5 h-5 w-5 text-[#D9E2DE]" />
+              <Icon className="mb-1.5 h-5 w-5 text-[#D5A45B]" />
               <span className="text-xl font-black text-white sm:text-2xl">{value}</span>
               <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#D9E2DE]/55 sm:text-xs">
                 {label}
@@ -120,7 +120,7 @@ export default function Joylashuv({ onOpenModal }) {
           className="mb-8 rounded-2xl border border-[#D9E2DE]/25 bg-[#D9E2DE]/5 p-5"
         >
           <div className="flex items-center gap-2 mb-3">
-            <GraduationCap className="h-5 w-5 text-[#D9E2DE]" />
+            <GraduationCap className="h-5 w-5 text-[#D5A45B]" />
             <span className="text-base font-black text-white">Chet elda ta'lim</span>
           </div>
           <div className="flex flex-col gap-2.5">
@@ -228,7 +228,7 @@ export default function Joylashuv({ onOpenModal }) {
             href="https://maps.app.goo.gl/ZkFJnV96RMuJBMWZA"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 rounded-xl border border-[#D9E2DE]/40 bg-[#D9E2DE]/10 px-6 py-3.5 text-sm font-bold text-[#D9E2DE] transition-all hover:bg-[#D9E2DE]/20"
+            className="flex items-center gap-2 rounded-xl border border-[#D5A45B]/40 bg-[#D5A45B]/10 px-6 py-3.5 text-sm font-bold text-[#D5A45B] transition-all hover:bg-[#D9E2DE]/20"
           >
             <Navigation className="h-4 w-4" />
             Google Xaritada ko'rish
@@ -239,7 +239,7 @@ export default function Joylashuv({ onOpenModal }) {
             whileHover={{ scale: 1.03, y: -2 }}
             whileTap={{ scale: 0.97 }}
             onClick={onOpenModal}
-            className="gold-btn flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold uppercase tracking-wide shadow-[0_6px_25px_rgba(217, 226, 222,0.4)]"
+            className="gold-btn flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold uppercase tracking-wide shadow-[0_6px_25px_rgba(213,164,91,0.4)]"
           >
             <Phone className="h-4 w-4 text-[#071F22]" />
             <span className="text-[#071F22]">Bepul Konsultatsiya</span>

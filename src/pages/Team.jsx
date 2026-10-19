@@ -162,7 +162,7 @@ export default function Team({ onOpenModal }) {
                     {/* Top Credentials Pills */}
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="inline-flex items-center gap-1.5 rounded-full border border-[#236B70]/60 bg-[#104F5A]/50 px-3 py-1 text-xs 2xl:text-sm font-bold text-[#D9E2DE]">
-                        <Briefcase className="h-3.5 w-3.5 text-[#D9E2DE]" />
+                        <Briefcase className="h-3.5 w-3.5 text-[#D5A45B]" />
                         <span>{member.experience[lang] || member.experience.uz}</span>
                       </span>
                       <span className="inline-flex items-center gap-1.5 rounded-full border border-[#236B70]/40 bg-[#071F22]/60 px-3 py-1 text-xs 2xl:text-sm font-medium text-[#D9E2DE]/90">
@@ -175,7 +175,7 @@ export default function Team({ onOpenModal }) {
                     <h2 className="mt-4 text-2xl 2xl:text-4xl font-black text-white sm:text-3xl tracking-tight">
                       {member.name}
                     </h2>
-                    <p className="mt-1 text-sm 2xl:text-base font-bold text-[#D9E2DE]">
+                    <p className="mt-1 text-sm 2xl:text-base font-bold text-[#D5A45B]">
                       {member.role[lang] || member.role.uz}
                     </p>
 
@@ -197,7 +197,7 @@ export default function Team({ onOpenModal }) {
                             key={sIndex}
                             className="inline-flex items-center gap-1.5 rounded-lg border border-[#D9E2DE]/25 bg-[#104F5A]/60 px-3 py-1.5 text-xs 2xl:text-sm font-semibold text-[#D9E2DE] shadow-sm hover:border-[#D9E2DE]/50 transition-colors"
                           >
-                            <CheckCircle2 className="h-3.5 w-3.5 text-[#D9E2DE]" />
+                            <CheckCircle2 className="h-3.5 w-3.5 text-[#D5A45B]" />
                             <span>{spec[lang] || spec.uz}</span>
                           </span>
                         ))}
@@ -216,7 +216,7 @@ export default function Team({ onOpenModal }) {
       <FadeUp yOffset={25} className="mt-12">
         <div className="glass-card p-6 sm:p-10 2xl:p-12 text-center text-white border border-[#236B70]/50 shadow-xl relative overflow-hidden">
           <div className="inline-block">
-            <Sparkles className="h-7 w-7 2xl:h-8 2xl:w-8 text-[#D9E2DE] mx-auto" />
+            <Sparkles className="h-7 w-7 2xl:h-8 2xl:w-8 text-[#D5A45B] mx-auto" />
           </div>
           <h3 className="mt-2 text-xl 2xl:text-2xl font-bold text-white sm:text-2xl">
             {t("team_guarantee_title")}

@@ -63,34 +63,34 @@ body {
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #FFFFFF 0%, #D9E2DE 50%, #A8C0B8 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #D5A45B 50%, #F3C77C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Luxury Soft Sage Glass Button with Frosted Glow */
+/* Luxury #D5A45B Glass Button with Frosted Glow */
 .gold-btn {
-  background: linear-gradient(135deg, #D9E2DE 0%, #B8C8C2 100%);
+  background: linear-gradient(135deg, #D5A45B 0%, #B8863A 100%);
   color: #071F22;
   font-weight: 800;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 4px 20px rgba(217, 226, 222, 0.25), 0 0 1px rgba(255, 255, 255, 0.4) inset;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 20px rgba(213, 164, 91, 0.35), 0 0 1px rgba(255, 255, 255, 0.4) inset;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gold-btn:hover {
-  background: linear-gradient(135deg, #FFFFFF 0%, #D9E2DE 100%);
+  background: linear-gradient(135deg, #E2B671 0%, #D5A45B 100%);
   color: #071F22;
-  box-shadow: 0 8px 30px rgba(217, 226, 222, 0.4), 0 0 15px rgba(217, 226, 222, 0.3);
+  box-shadow: 0 8px 30px rgba(213, 164, 91, 0.6), 0 0 15px rgba(213, 164, 91, 0.4);
   transform: translateY(-2px);
 }
 
-/* Semi-transparent Frosted Glass Button with Soft Sage Border & Text */
+/* Semi-transparent Frosted Glass Button with #D5A45B Border & Text */
 .teal-btn {
-  background: rgba(217, 226, 222, 0.08);
-  color: #D9E2DE;
+  background: rgba(213, 164, 91, 0.1);
+  color: #D5A45B;
   font-weight: 700;
-  border: 1px solid rgba(217, 226, 222, 0.3);
+  border: 1px solid rgba(213, 164, 91, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -98,18 +98,18 @@ body {
 }
 
 .teal-btn:hover {
-  background: rgba(217, 226, 222, 0.16);
-  border-color: #D9E2DE;
+  background: rgba(213, 164, 91, 0.2);
+  border-color: #D5A45B;
   color: #FFFFFF;
-  box-shadow: 0 6px 25px rgba(217, 226, 222, 0.25);
+  box-shadow: 0 6px 25px rgba(213, 164, 91, 0.35);
   transform: translateY(-2px);
 }
 
-/* Frosted Glass Outline Button with Soft Sage */
+/* Frosted Glass Outline Button with #D5A45B */
 .gold-btn-outline {
-  border: 1.5px solid #D9E2DE;
-  color: #D9E2DE;
-  background: rgba(217, 226, 222, 0.06);
+  border: 1.5px solid #D5A45B;
+  color: #D5A45B;
+  background: rgba(213, 164, 91, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   font-weight: 700;
@@ -117,9 +117,9 @@ body {
 }
 
 .gold-btn-outline:hover {
-  background: #D9E2DE;
+  background: #D5A45B;
   color: #071F22;
-  box-shadow: 0 6px 25px rgba(217, 226, 222, 0.35);
+  box-shadow: 0 6px 25px rgba(213, 164, 91, 0.5);
   transform: translateY(-2px);
 }
 

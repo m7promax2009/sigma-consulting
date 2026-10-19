@@ -100,10 +100,10 @@ export default function Testimonials({ onOpenModal }) {
         {/* Global Rating Box */}
         <div className="mt-6 inline-block">
           <TiltCard maxTilt={2} className="inline-flex items-center gap-4 rounded-2xl glass-card p-3.5 sm:p-4 text-left border border-[#236B70]/50 shadow-lg">
-            <div className="flex text-2xl sm:text-3xl font-black text-[#D9E2DE]">5.0</div>
+            <div className="flex text-2xl sm:text-3xl font-black text-[#D5A45B]">5.0</div>
             <div className="h-8 w-px bg-[#236B70]/40" />
             <div>
-              <div className="flex text-[#D9E2DE]">
+              <div className="flex text-[#D5A45B]">
                 {"★★★★★".split("").map((s, i) => (
                   <span key={i} className="text-sm">★</span>
                 ))}
@@ -145,7 +145,7 @@ export default function Testimonials({ onOpenModal }) {
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <div className="flex text-[#D9E2DE]">
+                  <div className="flex text-[#D5A45B]">
                     {"★".repeat(r.rating).split("").map((s, idx) => (
                       <span key={idx} className="text-sm">★</span>
                     ))}
@@ -161,7 +161,7 @@ export default function Testimonials({ onOpenModal }) {
               <div className="mt-6 border-t border-[#236B70]/30 pt-4">
                 <div className="font-bold text-white text-sm">{r.name}</div>
                 <div className="text-[11px] text-[#D9E2DE]/70">{r.role[lang] || r.role.uz}</div>
-                <div className="mt-1 text-[11px] font-bold text-[#D9E2DE]">
+                <div className="mt-1 text-[11px] font-bold text-[#D5A45B]">
                   {r.country[lang] || r.country.uz}
                 </div>
               </div>
@@ -174,7 +174,7 @@ export default function Testimonials({ onOpenModal }) {
       <FadeUp yOffset={25} className="mt-10 sm:mt-12">
         <div className="glass-card p-6 sm:p-10 text-center text-white border border-[#236B70]/50 shadow-xl relative overflow-hidden">
           <div className="inline-block">
-            <InstagramIcon className="mx-auto h-9 w-9 2xl:h-10 2xl:w-10 text-[#D9E2DE]" />
+            <InstagramIcon className="mx-auto h-9 w-9 2xl:h-10 2xl:w-10 text-[#D5A45B]" />
           </div>
           <h3 className="mt-2 text-xl 2xl:text-2xl font-bold text-white sm:text-2xl">
             {t("heading_instagram")}

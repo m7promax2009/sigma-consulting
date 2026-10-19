@@ -42,19 +42,19 @@ export default function MobileBottomNav() {
                   {isActive && (
                     <motion.div
                       layoutId="mobileActiveTab"
-                      className="absolute inset-0 rounded-xl bg-[#D9E2DE]/15 border border-[#D9E2DE]/40 shadow-[0_0_15px_rgba(217, 226, 222,0.25)]"
+                      className="absolute inset-0 rounded-xl bg-[#D5A45B]/15 border border-[#D5A45B]/40 shadow-[0_0_15px_rgba(213,164,91,0.25)]"
                       transition={{ type: "spring", stiffness: 400, damping: 32 }}
                     />
                   )}
                   <div className="relative z-10 flex flex-col items-center">
                     <Icon
                       className={`h-4.5 w-4.5 transition-transform duration-200 ${
-                        isActive ? "scale-105 text-[#D9E2DE]" : "text-white/60 group-hover:text-white"
+                        isActive ? "scale-105 text-[#D5A45B]" : "text-white/60 group-hover:text-white"
                       }`}
                     />
                     <span
                       className={`text-[9.5px] tracking-tight mt-0.5 ${
-                        isActive ? "font-bold text-[#D9E2DE]" : "font-semibold text-white/60"
+                        isActive ? "font-bold text-[#D5A45B]" : "font-semibold text-white/60"
                       }`}
                     >
                       {t(item.key)}
