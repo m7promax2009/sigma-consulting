@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ConsultationModal from "./components/ConsultationModal";
+import LicenseModal from "./components/LicenseModal";
 import MobileBottomNav from "./components/MobileBottomNav";
 import {
   ScrollProgressBar,
@@ -34,7 +35,7 @@ function ScrollToTop() {
 }
 
 // Inner routes with smooth page enter/exit animations
-function AnimatedRoutes({ onOpenModal }) {
+function AnimatedRoutes({ onOpenModal, onOpenLicense }) {
   const location = useLocation();
 
   return (
@@ -48,7 +49,7 @@ function AnimatedRoutes({ onOpenModal }) {
         className="flex-1 flex flex-col min-w-0"
       >
         <Routes location={location}>
-          <Route path="/" element={<Home onOpenModal={onOpenModal} />} />
+          <Route path="/" element={<Home onOpenModal={onOpenModal} onOpenLicense={onOpenLicense} />} />
           <Route path="/tariflar" element={<Pricing onOpenModal={onOpenModal} />} />
           <Route path="/natijalar" element={<Results onOpenModal={onOpenModal} />} />
           <Route path="/jamoa" element={<Team onOpenModal={onOpenModal} />} />
@@ -65,6 +66,7 @@ export default function App() {
   const { t } = useLanguage();
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLicenseOpen, setIsLicenseOpen] = useState(false);
   const [modalContext, setModalContext] = useState({
     reason: t("app_modal_default_reason"),
     country: t("app_modal_default_country"),
@@ -107,11 +109,14 @@ export default function App() {
 
           {/* Animated Page Transitions */}
           <main className="flex-1 flex flex-col min-w-0 pb-16 md:pb-0">
-            <AnimatedRoutes onOpenModal={openModal} />
+            <AnimatedRoutes onOpenModal={openModal} onOpenLicense={() => setIsLicenseOpen(true)} />
           </main>
 
           {/* Global Footer */}
-          <Footer onOpenModal={() => openModal({ reason: t("app_reason_footer") })} />
+          <Footer
+            onOpenModal={() => openModal({ reason: t("app_reason_footer") })}
+            onOpenLicense={() => setIsLicenseOpen(true)}
+          />
 
           {/* Mobile Persistent Bottom Navigation Bar */}
           <MobileBottomNav />
@@ -157,6 +162,9 @@ export default function App() {
 
           {/* Global Consultation Modal */}
           <ConsultationModal isOpen={isModalOpen} onClose={closeModal} context={modalContext} />
+
+          {/* Official License / Guvohnoma Modal */}
+          <LicenseModal isOpen={isLicenseOpen} onClose={() => setIsLicenseOpen(false)} />
         </div>
       </BrowserRouter>
   );

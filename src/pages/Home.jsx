@@ -212,7 +212,7 @@ const steps = [
   },
 ];
 
-export default function Home({ onOpenModal }) {
+export default function Home({ onOpenModal, onOpenLicense }) {
   const { t, lang } = useLanguage();
   const [selectedRegion, setSelectedRegion] = useState("Barchasi");
 
@@ -277,10 +277,22 @@ export default function Home({ onOpenModal }) {
 
               {/* Trust Assurances */}
               <div className="flex flex-wrap items-center gap-2.5 pt-1">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs font-semibold text-white/90 backdrop-blur-md">
-                  <CheckCircle2 className="h-4 w-4 text-[#D5A45B] shrink-0" />
-                  <span>{t("home_trust_licensed")}</span>
-                </div>
+                <motion.button
+                  type="button"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.96 }}
+                  onClick={onOpenLicense}
+                  title={t("license_badge_tooltip")}
+                  className="group inline-flex items-center gap-2 rounded-full border border-[#D5A45B]/60 bg-[#D5A45B]/15 hover:border-[#D5A45B] hover:bg-[#D5A45B]/25 px-3.5 py-1.5 text-xs font-bold text-white shadow-[0_2px_18px_rgba(213,164,91,0.25)] transition-all cursor-pointer backdrop-blur-md"
+                >
+                  <CheckCircle2 className="h-4 w-4 text-[#D5A45B] shrink-0 transition-transform group-hover:scale-110" />
+                  <span className="text-[#F3C77C] group-hover:text-white transition-colors underline decoration-[#D5A45B]/60 underline-offset-4">
+                    {t("home_trust_licensed")}
+                  </span>
+                  <span className="rounded-full bg-[#D5A45B] px-2 py-0.5 text-[9px] font-black uppercase text-[#071F22] tracking-wider shadow-sm">
+                    Guvohnoma
+                  </span>
+                </motion.button>
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs font-semibold text-white/90 backdrop-blur-md">
                   <CheckCircle2 className="h-4 w-4 text-[#D5A45B] shrink-0" />
                   <span>{t("home_trust_contract")}</span>

@@ -13,7 +13,7 @@ import {
 import { InstagramIcon } from "./Icons";
 import { useLanguage } from "../contexts/LanguageContext";
 
-export default function Footer({ onOpenModal }) {
+export default function Footer({ onOpenModal, onOpenLicense }) {
   const { t } = useLanguage();
   return (
     <footer className="relative border-t border-[#236B70]/40 bg-[#071F22] text-[#D9E2DE] overflow-hidden">
@@ -103,10 +103,14 @@ export default function Footer({ onOpenModal }) {
               </a>
             </div>
 
-            <div className="inline-flex items-center gap-2 rounded-lg border border-[#D5A45B]/30 bg-[#0B343B]/60 px-3 py-1.5 text-[11px] text-slate-200">
-              <ShieldCheck className="h-3.5 w-3.5 text-[#D5A45B]" />
+            <button
+              type="button"
+              onClick={onOpenLicense}
+              className="inline-flex items-center gap-2 rounded-lg border border-[#D5A45B]/30 bg-[#0B343B]/60 px-3 py-1.5 text-[11px] text-slate-200 hover:border-[#D5A45B] hover:text-[#F3C77C] transition-colors cursor-pointer text-left"
+            >
+              <ShieldCheck className="h-3.5 w-3.5 text-[#D5A45B] shrink-0" />
               <span>{t("footer_contract")}</span>
-            </div>
+            </button>
           </div>
 
           {/* Column 2: Sahifalar */}
@@ -236,10 +240,14 @@ export default function Footer({ onOpenModal }) {
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#236B70]/40 pt-6 text-[11px] 2xl:text-xs text-slate-400 sm:flex-row">
           <p>{t("copyright", { year: new Date().getFullYear() })}</p>
           <div className="flex items-center gap-4 text-slate-300">
-            <span className="flex items-center gap-1.5 text-[#D5A45B]">
+            <button
+              type="button"
+              onClick={onOpenLicense}
+              className="flex items-center gap-1.5 text-[#D5A45B] hover:text-[#F3C77C] hover:underline cursor-pointer transition-colors"
+            >
               <ShieldCheck className="h-3.5 w-3.5 text-[#D5A45B]" />
               <span>{t("footer_contract")}</span>
-            </span>
+            </button>
             <span>•</span>
             <span>{t("footer_privacy")}</span>
           </div>
