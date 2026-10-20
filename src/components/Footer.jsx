@@ -122,6 +122,7 @@ export default function Footer({ onOpenModal, onOpenLicense }) {
             <ul className="mt-4 space-y-2.5 text-xs 2xl:text-sm">
               {[
                 { to: "/", key: "nav_home" },
+                { to: "/davlatlar", key: "nav_countries" },
                 { to: "/tariflar", key: "footer_link_pricing" },
                 { to: "/natijalar", key: "footer_link_results" },
                 { to: "/jamoa", key: "footer_link_team" },

@@ -368,7 +368,7 @@ export default function Home({ onOpenModal, onOpenLicense }) {
             </p>
           </div>
           <Link
-            to="/natijalar"
+            to="/davlatlar"
             className="inline-flex items-center gap-1.5 text-xs 2xl:text-sm font-bold text-[#D5A45B] hover:text-[#F3C77C] transition-colors"
           >
             <span>{t("home_destinations_all_results")}</span>

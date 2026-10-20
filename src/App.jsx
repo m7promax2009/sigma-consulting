@@ -15,6 +15,7 @@ import PageLoader from "./components/PageLoader";
 import { useLanguage } from "./contexts/LanguageContext";
 
 import Home from "./pages/Home";
+import Countries from "./pages/Countries";
 import Pricing from "./pages/Pricing";
 import Results from "./pages/Results";
 import Team from "./pages/Team";
@@ -50,6 +51,8 @@ function AnimatedRoutes({ onOpenModal, onOpenLicense }) {
       >
         <Routes location={location}>
           <Route path="/" element={<Home onOpenModal={onOpenModal} onOpenLicense={onOpenLicense} />} />
+          <Route path="/davlatlar" element={<Countries onOpenModal={onOpenModal} />} />
+          <Route path="/countries" element={<Countries onOpenModal={onOpenModal} />} />
           <Route path="/tariflar" element={<Pricing onOpenModal={onOpenModal} />} />
           <Route path="/natijalar" element={<Results onOpenModal={onOpenModal} />} />
           <Route path="/jamoa" element={<Team onOpenModal={onOpenModal} />} />

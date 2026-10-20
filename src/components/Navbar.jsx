@@ -7,6 +7,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 const links = [
   { to: "/", key: "nav_home" },
+  { to: "/davlatlar", key: "nav_countries" },
   { to: "/tariflar", key: "nav_pricing" },
   { to: "/natijalar", key: "nav_results" },
   { to: "/jamoa", key: "nav_team" },
