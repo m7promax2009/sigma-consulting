@@ -13,10 +13,9 @@ import {
   Building2,
   ExternalLink
 } from "lucide-react";
-import { FadeUp, SlideIn, TiltCard, Counter } from "../components/Motion";
+import { FadeUp, SlideIn, TiltCard, Counter, CountryDetailModal } from "../components";
 import { useLanguage } from "../contexts/LanguageContext";
 import { countriesData } from "../data/countriesData";
-import CountryDetailModal from "../components/CountryDetailModal";
 
 const categoryTabs = [
   { uz: "Barchasi", ru: "Все", en: "All" },

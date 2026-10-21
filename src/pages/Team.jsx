@@ -62,7 +62,7 @@ const teamMembers = [
       ru: "Руководитель проектов",
       en: "Head of Projects",
     },
-    image: "/images/faxriddin_ergashev.jpg",
+    image: "/images/faxriddin_ergashev.png",
     experience: {
       uz: "4 yillik tajriba",
       ru: "Опыт 4 года",

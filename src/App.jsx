@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import ConsultationModal from "./components/ConsultationModal";
-import LicenseModal from "./components/LicenseModal";
-import MobileBottomNav from "./components/MobileBottomNav";
 import {
+  Navbar,
+  Footer,
+  ConsultationModal,
+  LicenseModal,
+  MobileBottomNav,
+  PageLoader,
   ScrollProgressBar,
   LiveActivityToast,
-} from "./components/Motion";
-import PageLoader from "./components/PageLoader";
+} from "./components";
 import { useLanguage } from "./contexts/LanguageContext";
 
 import Home from "./pages/Home";

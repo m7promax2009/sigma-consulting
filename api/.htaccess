@@ -1,0 +1,26 @@
+# ==============================================================================
+# aHost.uz / cPanel / Apache / LiteSpeed Web Server Configuration
+# ==============================================================================
+
+# 1. Protect sensitive files from direct browser download
+<FilesMatch "^(leads\.csv|\.env.*|config\.php)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 2. CORS Headers for cross-origin frontend requests
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# 3. URL Rewrite: Allow calling /api/lead or /api/lead/
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /api/
+    
+    # Route /api/lead to /api/lead.php
+    RewriteRule ^lead/?$ lead.php [L,QSA]
+</IfModule>
