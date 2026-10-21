@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigma Consulting — aHost API Test Paneli</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background: #071e22; color: #f1f5f9; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+    .card { background: #0c2b30; border: 1px solid #1f5056; border-radius: 16px; padding: 28px; width: 100%; max-width: 520px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    h1 { font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    p.sub { font-size: 13px; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+    .form-group { margin-bottom: 14px; }
+    label { display: block; font-size: 12px; font-weight: 600; color: #cbd5e1; margin-bottom: 6px; }
+    input, select { width: 100%; height: 42px; background: #072227; border: 1px solid #1f5056; border-radius: 10px; color: #fff; padding: 0 14px; font-size: 14px; outline: none; transition: 0.2s; }
+    input:focus, select:focus { border-color: #2dd4bf; }
+    button { width: 100%; height: 44px; background: #0d9488; color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; transition: 0.2s; margin-top: 10px; }
+    button:hover { background: #14b8a6; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    #responseBox { margin-top: 20px; background: #041417; border: 1px solid #163e43; border-radius: 10px; padding: 14px; font-family: monospace; font-size: 12px; white-space: pre-wrap; word-break: break-all; display: none; }
+    .badge-ok { color: #4ade80; font-weight: bold; }
+    .badge-err { color: #f87171; font-weight: bold; }
+    .links-box { margin-top: 20px; padding-top: 16px; border-top: 1px solid #163e43; font-size: 12px; color: #94a3b8; }
+    .links-box a { color: #2dd4bf; text-decoration: none; }
+    .links-box a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 aHost API Test Paneli</h1>
+    <p class="sub">Ushbu panel orqali <code>lead.php</code> API si to'g'ri ishlayotganligini va Telegram botga xabar yetib borayotganligini tekshirishingiz mumkin.</p>
+
+    <form id="testForm">
+      <div class="form-group">
+        <label>Mijoz ismi</label>
+        <input type="text" id="name" value="Test Foydalanuvchi" required>
+      </div>
+      <div class="form-group">
+        <label>Telefon raqam</label>
+        <input type="tel" id="phone" value="+998901234567" required>
+      </div>
+      <div class="form-group">
+        <label>Davlat</label>
+        <input type="text" id="country" value="Buyuk Britaniya (UK)">
+      </div>
+      <div class="form-group">
+        <label>Ta'lim bosqichi</label>
+        <select id="degree">
+          <option value="Bakalavriat">Bakalavriat</option>
+          <option value="Magistratura">Magistratura</option>
+          <option value="Til kurslari">Til kurslari</option>
+        </select>
+      </div>
+
+      <button type="submit" id="submitBtn">⚡ API ga Test So'rov Jo'natish</button>
+    </form>
+
+    <div id="responseBox"></div>
+
+    <div class="links-box">
+      <strong>🔗 Foydali havolalar:</strong><br>
+      • API Endpoint: <code>lead.php</code><br>
+      • Bot holati: <a href="https://api.telegram.org/bot8893326249:AAGiCF91gWbHbiJ8ZFygNikKe2cNQ8KGTHU/getMe" target="_blank">Telegram Bot getMe</a><br>
+      • Oxirgi xabarlar: <a href="https://api.telegram.org/bot8893326249:AAGiCF91gWbHbiJ8ZFygNikKe2cNQ8KGTHU/getUpdates" target="_blank">Telegram Bot getUpdates</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('testForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const responseBox = document.getElementById('responseBox');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = '⏳ Yuborilmoqda...';
+      responseBox.style.display = 'block';
+      responseBox.textContent = 'So\'rov jo\'natilmoqda...';
+
+      const payload = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        country: document.getElementById('country').value,
+        degree: document.getElementById('degree').value,
+        reason: 'aHost test.html orqali yuborilgan sinov arizasi'
+      };
+
+      try {
+        const res = await fetch('lead.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+        submitBtn.disabled = false;
+        submitBtn.textContent = '⚡ API ga Test So\'rov Jo\'natish';
+
+        if (res.ok && data.success) {
+          responseBox.innerHTML = '<span class="badge-ok">✅ Muvaffaqiyatli (HTTP ' + res.status + '):</span>\n' + JSON.stringify(data, null, 2);
+        } else {
+          responseBox.innerHTML = '<span class="badge-err">❌ Xatolik (HTTP ' + res.status + '):</span>\n' + JSON.stringify(data, null, 2);
+        }
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '⚡ API ga Test So\'rov Jo\'natish';
+        responseBox.innerHTML = '<span class="badge-err">❌ Server bilan aloqa yo\'q:</span>\n' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>
